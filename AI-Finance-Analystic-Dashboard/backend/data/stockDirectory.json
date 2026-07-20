@@ -1,0 +1,4527 @@
+[
+  {
+    "symbol": "AAL",
+    "name": "American Airlines Group Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AARTIIND",
+    "name": "Aarti Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ABB",
+    "name": "ABB India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ABBV",
+    "name": "AbbVie Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ABNB",
+    "name": "Airbnb Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ABT",
+    "name": "Abbott Laboratories",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ACC",
+    "name": "ACC Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ACN",
+    "name": "Accenture plc",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ADANIENT",
+    "name": "Adani Enterprises Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "name": "Adani Green Energy Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "name": "Adani Ports and Special Economic Zone Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "name": "Adani Power Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ADANITRANS",
+    "name": "Adani Energy Solutions Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ADBE",
+    "name": "Adobe Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ADI",
+    "name": "Analog Devices Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ADP",
+    "name": "Automatic Data Processing Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AEP",
+    "name": "American Electric Power Company Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AI",
+    "name": "C3.ai Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ALKEM",
+    "name": "Alkem Laboratories Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AMAT",
+    "name": "Applied Materials Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "name": "Ambuja Cements Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AMGN",
+    "name": "Amgen Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AMT",
+    "name": "American Tower Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ANSS",
+    "name": "ANSYS Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "APBA301",
+    "name": "Apex Bank Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "APCA061",
+    "name": "Apex Capital Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "APD",
+    "name": "Air Products and Chemicals Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "APEN121",
+    "name": "Apex Energy Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "APFO181",
+    "name": "Apex Foods Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "APHO031",
+    "name": "Apex Holdings Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "APLO211",
+    "name": "Apex Logistics Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "APMA241",
+    "name": "Apex Materials Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "APMO271",
+    "name": "Apex Motors Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "name": "Apollo Hospitals Enterprise Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "APPH091",
+    "name": "Apex Pharma Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "APRE151",
+    "name": "Apex Retail Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "APSO331",
+    "name": "Apex Software Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Software"
+  },
+  {
+    "symbol": "APSY001",
+    "name": "Apex Systems Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Technology",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "name": "Ashok Leyland Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ASML",
+    "name": "ASML Holding N.V.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ATBA317",
+    "name": "Atlas Bank plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "ATCA077",
+    "name": "Atlas Capital plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "ATEN137",
+    "name": "Atlas Energy plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "ATFO197",
+    "name": "Atlas Foods plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "ATHO047",
+    "name": "Atlas Holdings plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "ATLO227",
+    "name": "Atlas Logistics plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "ATMA257",
+    "name": "Atlas Materials plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "ATMO287",
+    "name": "Atlas Motors plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "ATPH107",
+    "name": "Atlas Pharma plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "ATRE167",
+    "name": "Atlas Retail plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "ATSO347",
+    "name": "Atlas Software plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Software"
+  },
+  {
+    "symbol": "ATSY017",
+    "name": "Atlas Systems plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Utilities",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "AUBA313",
+    "name": "Aurora Bank Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "AUBANK",
+    "name": "AU Small Finance Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AUCA073",
+    "name": "Aurora Capital Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "AUEN133",
+    "name": "Aurora Energy Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "AUFO193",
+    "name": "Aurora Foods Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "AUHO043",
+    "name": "Aurora Holdings Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "AULO223",
+    "name": "Aurora Logistics Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "AUMA253",
+    "name": "Aurora Materials Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "AUMO283",
+    "name": "Aurora Motors Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "AUPH103",
+    "name": "Aurora Pharma Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "AURE163",
+    "name": "Aurora Retail Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "name": "Aurobindo Pharma Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AUSO343",
+    "name": "Aurora Software Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Software"
+  },
+  {
+    "symbol": "AUSY013",
+    "name": "Aurora Systems Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Healthcare",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "AVGO",
+    "name": "Broadcom Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "Axis Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "AXP",
+    "name": "American Express Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BA",
+    "name": "The Boeing Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BABA",
+    "name": "Alibaba Group Holding Limited",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAC",
+    "name": "Bank of America Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "name": "Bajaj Auto Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "name": "Bajaj Finserv Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "Bajaj Finance Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BALKRISIND",
+    "name": "Balkrishna Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "name": "Bandhan Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BANKBARODA",
+    "name": "Bank of Baroda",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BEL",
+    "name": "Bharat Electronics Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "name": "Berger Paints India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BHEL",
+    "name": "Bharat Heavy Electricals Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BIIB",
+    "name": "Biogen Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BIOCON",
+    "name": "Biocon Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BKNG",
+    "name": "Booking Holdings Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BKR",
+    "name": "Baker Hughes Company",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BLK",
+    "name": "BlackRock Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "name": "Bosch Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BPCL",
+    "name": "Bharat Petroleum Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "BSX",
+    "name": "Boston Scientific Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "C",
+    "name": "Citigroup Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CABA319",
+    "name": "Catalyst Bank Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "CACA079",
+    "name": "Catalyst Capital Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "CAEN139",
+    "name": "Catalyst Energy Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "CAFO199",
+    "name": "Catalyst Foods Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "CAHO049",
+    "name": "Catalyst Holdings Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "CALO229",
+    "name": "Catalyst Logistics Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "CAMA259",
+    "name": "Catalyst Materials Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "CAMO289",
+    "name": "Catalyst Motors Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "CANBK",
+    "name": "Canara Bank",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "CAPH109",
+    "name": "Catalyst Pharma Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "CARE169",
+    "name": "Catalyst Retail Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "CASO349",
+    "name": "Catalyst Software Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "CASY019",
+    "name": "Catalyst Systems Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Communication Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "CAT",
+    "name": "Caterpillar Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CB",
+    "name": "Chubb Limited",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CCL",
+    "name": "Carnival Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CDNS",
+    "name": "Cadence Design Systems Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "name": "Cholamandalam Investment and Finance Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "CHTR",
+    "name": "Charter Communications Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "Cipla Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "CL",
+    "name": "Colgate-Palmolive Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CME",
+    "name": "CME Group Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "Coal India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "COBA312",
+    "name": "Cobalt Bank Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "COCA072",
+    "name": "Cobalt Capital Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "COEN132",
+    "name": "Cobalt Energy Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "COFO192",
+    "name": "Cobalt Foods Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "COFORGE",
+    "name": "Coforge Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "COHO042",
+    "name": "Cobalt Holdings Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "COLO222",
+    "name": "Cobalt Logistics Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "COLPAL",
+    "name": "Colgate-Palmolive India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "COMA252",
+    "name": "Cobalt Materials Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "COMO282",
+    "name": "Cobalt Motors Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "CONCOR",
+    "name": "Container Corporation of India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "COP",
+    "name": "ConocoPhillips",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COPH102",
+    "name": "Cobalt Pharma Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "CORE162",
+    "name": "Cobalt Retail Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "COROMANDEL",
+    "name": "Coromandel International Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "COSO342",
+    "name": "Cobalt Software Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "COST",
+    "name": "Costco Wholesale Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "COSY012",
+    "name": "Cobalt Systems Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Financial Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "CPRT",
+    "name": "Copart Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CRBA315",
+    "name": "Crescent Bank Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "CRCA075",
+    "name": "Crescent Capital Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "CREN135",
+    "name": "Crescent Energy Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "CRFO195",
+    "name": "Crescent Foods Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "CRHO045",
+    "name": "Crescent Holdings Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "CRLO225",
+    "name": "Crescent Logistics Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "CRM",
+    "name": "Salesforce, Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRMA255",
+    "name": "Crescent Materials Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "CRMO285",
+    "name": "Crescent Motors Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "CRPH105",
+    "name": "Crescent Pharma Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "CRRE165",
+    "name": "Crescent Retail Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "CRSO345",
+    "name": "Crescent Software Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "CRSY015",
+    "name": "Crescent Systems Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Industrials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "CRWD",
+    "name": "CrowdStrike Holdings Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco Systems Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CSX",
+    "name": "CSX Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CTAS",
+    "name": "Cintas Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CVX",
+    "name": "Chevron Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DABUR",
+    "name": "Dabur India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DAL",
+    "name": "Delta Air Lines Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DASH",
+    "name": "DoorDash Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "DDOG",
+    "name": "Datadog Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "DE",
+    "name": "Deere & Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DEEPAKNTR",
+    "name": "Deepak Nitrite Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DELHIVERY",
+    "name": "Delhivery Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DIS",
+    "name": "The Walt Disney Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "Divis Laboratories Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DLF",
+    "name": "DLF Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DMART",
+    "name": "Avenue Supermarts Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "Dr. Reddys Laboratories Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "DUK",
+    "name": "Duke Energy Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DXCM",
+    "name": "DexCom Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "EA",
+    "name": "Electronic Arts Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "EICHERMOT",
+    "name": "Eicher Motors Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ELV",
+    "name": "Elevance Health Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EOG",
+    "name": "EOG Resources Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ESCORTS",
+    "name": "Escorts Kubota Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ETN",
+    "name": "Eaton Corporation plc",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EVBA322",
+    "name": "Evergreen Bank Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "EVCA082",
+    "name": "Evergreen Capital Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "EVEN142",
+    "name": "Evergreen Energy Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "EVFO202",
+    "name": "Evergreen Foods Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "EVHO052",
+    "name": "Evergreen Holdings Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "EVLO232",
+    "name": "Evergreen Logistics Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "EVMA262",
+    "name": "Evergreen Materials Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "EVMO292",
+    "name": "Evergreen Motors Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "EVPH112",
+    "name": "Evergreen Pharma Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "EVRE172",
+    "name": "Evergreen Retail Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "EVSO352",
+    "name": "Evergreen Software Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "EVSY022",
+    "name": "Evergreen Systems Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Financial Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "EXC",
+    "name": "Exelon Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "F",
+    "name": "Ford Motor Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FAST",
+    "name": "Fastenal Company",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "FDX",
+    "name": "FedEx Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "name": "Federal Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "FI",
+    "name": "Fiserv Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FRBA320",
+    "name": "Frontier Bank Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "FRCA080",
+    "name": "Frontier Capital Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "FREN140",
+    "name": "Frontier Energy Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "FRFO200",
+    "name": "Frontier Foods Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "FRHO050",
+    "name": "Frontier Holdings Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "FRLO230",
+    "name": "Frontier Logistics Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "FRMA260",
+    "name": "Frontier Materials Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "FRMO290",
+    "name": "Frontier Motors Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "FRPH110",
+    "name": "Frontier Pharma Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "FRRE170",
+    "name": "Frontier Retail Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "FRSO350",
+    "name": "Frontier Software Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Software"
+  },
+  {
+    "symbol": "FRSY020",
+    "name": "Frontier Systems Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Real Estate",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "FTNT",
+    "name": "Fortinet Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "FUBA307",
+    "name": "Fusion Bank Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "FUCA067",
+    "name": "Fusion Capital Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "FUEN127",
+    "name": "Fusion Energy Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "FUFO187",
+    "name": "Fusion Foods Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "FUHO037",
+    "name": "Fusion Holdings Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "FULO217",
+    "name": "Fusion Logistics Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "FUMA247",
+    "name": "Fusion Materials Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "FUMO277",
+    "name": "Fusion Motors Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "FUPH097",
+    "name": "Fusion Pharma Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "FURE157",
+    "name": "Fusion Retail Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "FUSO337",
+    "name": "Fusion Software Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Software"
+  },
+  {
+    "symbol": "FUSY007",
+    "name": "Fusion Systems Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Utilities",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "GD",
+    "name": "General Dynamics Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GE",
+    "name": "GE Aerospace",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GEHC",
+    "name": "GE HealthCare Technologies Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GILD",
+    "name": "Gilead Sciences Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GLENMARK",
+    "name": "Glenmark Pharmaceuticals Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "GM",
+    "name": "General Motors Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GODREJCP",
+    "name": "Godrej Consumer Products Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet Inc. Class C",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GRASIM",
+    "name": "Grasim Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "GRBA328",
+    "name": "Granite Bank Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "GRCA088",
+    "name": "Granite Capital Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "GREN148",
+    "name": "Granite Energy Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "GRFO208",
+    "name": "Granite Foods Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "GRHO058",
+    "name": "Granite Holdings Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "GRLO238",
+    "name": "Granite Logistics Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "GRMA268",
+    "name": "Granite Materials Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "GRMO298",
+    "name": "Granite Motors Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "GRPH118",
+    "name": "Granite Pharma Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "GRRE178",
+    "name": "Granite Retail Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "GRSO358",
+    "name": "Granite Software Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "GRSY028",
+    "name": "Granite Systems Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Materials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "GS",
+    "name": "The Goldman Sachs Group, Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HABA314",
+    "name": "Harbor Bank Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "HACA074",
+    "name": "Harbor Capital Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "HAEN134",
+    "name": "Harbor Energy Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "HAFO194",
+    "name": "Harbor Foods Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "HAHO044",
+    "name": "Harbor Holdings Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "HAL",
+    "name": "Hindustan Aeronautics Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HALO224",
+    "name": "Harbor Logistics Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "HAMA254",
+    "name": "Harbor Materials Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "HAMO284",
+    "name": "Harbor Motors Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "HAPH104",
+    "name": "Harbor Pharma Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "HARE164",
+    "name": "Harbor Retail Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "HASO344",
+    "name": "Harbor Software Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Software"
+  },
+  {
+    "symbol": "HASY014",
+    "name": "Harbor Systems Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Consumer",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "HAVELLS",
+    "name": "Havells India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HCA",
+    "name": "HCA Healthcare Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HCLTECH",
+    "name": "HCL Technologies Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HD",
+    "name": "The Home Depot, Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "name": "HDFC Life Insurance Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "name": "Hero MotoCorp Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HINDALCO",
+    "name": "Hindalco Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HINDPETRO",
+    "name": "Hindustan Petroleum Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "HOBA329",
+    "name": "Horizon Bank plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "HOCA089",
+    "name": "Horizon Capital plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "HOEN149",
+    "name": "Horizon Energy plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "HOFO209",
+    "name": "Horizon Foods plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "HOHO059",
+    "name": "Horizon Holdings plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "HOLO239",
+    "name": "Horizon Logistics plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "HOMA269",
+    "name": "Horizon Materials plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "HOMO299",
+    "name": "Horizon Motors plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "HON",
+    "name": "Honeywell International Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "HOPH119",
+    "name": "Horizon Pharma plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "HORE179",
+    "name": "Horizon Retail plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "HOSO359",
+    "name": "Horizon Software plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "HOSY029",
+    "name": "Horizon Systems plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Communication Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "IBM",
+    "name": "International Business Machines Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ICE",
+    "name": "Intercontinental Exchange Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ICICIGI",
+    "name": "ICICI Lombard General Insurance Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "name": "ICICI Prudential Life Insurance Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "IDEA",
+    "name": "Vodafone Idea Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "name": "IDFC First Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "IDXX",
+    "name": "IDEXX Laboratories Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ILMN",
+    "name": "Illumina Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "INDHOTEL",
+    "name": "Indian Hotels Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "INDIGO",
+    "name": "InterGlobe Aviation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "name": "IndusInd Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "INTU",
+    "name": "Intuit Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "IOC",
+    "name": "Indian Oil Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "IRCTC",
+    "name": "Indian Railway Catering and Tourism Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "IRFC",
+    "name": "Indian Railway Finance Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ISRG",
+    "name": "Intuitive Surgical Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ITW",
+    "name": "Illinois Tool Works Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JNJ",
+    "name": "Johnson & Johnson",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "name": "JSW Steel Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "JUBLFOOD",
+    "name": "Jubilant FoodWorks Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "KDP",
+    "name": "Keurig Dr Pepper Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "KEBA326",
+    "name": "Keystone Bank Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "KECA086",
+    "name": "Keystone Capital Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "KEEN146",
+    "name": "Keystone Energy Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "KEFO206",
+    "name": "Keystone Foods Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "KEHO056",
+    "name": "Keystone Holdings Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "KELO236",
+    "name": "Keystone Logistics Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "KEMA266",
+    "name": "Keystone Materials Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "KEMO296",
+    "name": "Keystone Motors Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "KEPH116",
+    "name": "Keystone Pharma Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "KERE176",
+    "name": "Keystone Retail Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "KESO356",
+    "name": "Keystone Software Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Software"
+  },
+  {
+    "symbol": "KESY026",
+    "name": "Keystone Systems Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Energy",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "KHC",
+    "name": "The Kraft Heinz Company",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "KLAC",
+    "name": "KLA Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "KO",
+    "name": "The Coca-Cola Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "Kotak Mahindra Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LI",
+    "name": "Li Auto Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "LIBA321",
+    "name": "Liberty Bank Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "LICA081",
+    "name": "Liberty Capital Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "name": "LIC Housing Finance Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LICI",
+    "name": "Life Insurance Corporation of India",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LIEN141",
+    "name": "Liberty Energy Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "LIFO201",
+    "name": "Liberty Foods Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "LIHO051",
+    "name": "Liberty Holdings Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "LILO231",
+    "name": "Liberty Logistics Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "LIMA261",
+    "name": "Liberty Materials Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "LIMO291",
+    "name": "Liberty Motors Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "LIN",
+    "name": "Linde plc",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LIPH111",
+    "name": "Liberty Pharma Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "LIRE171",
+    "name": "Liberty Retail Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "LISO351",
+    "name": "Liberty Software Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Software"
+  },
+  {
+    "symbol": "LISY021",
+    "name": "Liberty Systems Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Technology",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "LLY",
+    "name": "Eli Lilly and Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LMT",
+    "name": "Lockheed Martin Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LODHA",
+    "name": "Macrotech Developers Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LOW",
+    "name": "Lowes Companies Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LRCX",
+    "name": "Lam Research Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LTIM",
+    "name": "LTIMindtree Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LTTS",
+    "name": "L&T Technology Services Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "LULU",
+    "name": "Lululemon Athletica Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "LUPIN",
+    "name": "Lupin Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "M&M",
+    "name": "Mahindra & Mahindra Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MA",
+    "name": "Mastercard Incorporated",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "name": "Manappuram Finance Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MAR",
+    "name": "Marriott International Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MARICO",
+    "name": "Marico Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MARUTI",
+    "name": "Maruti Suzuki India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MCD",
+    "name": "McDonald's Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MCDOWELL-N",
+    "name": "United Spirits Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MCHP",
+    "name": "Microchip Technology Incorporated",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MCO",
+    "name": "Moodys Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MDLZ",
+    "name": "Mondelez International Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MDT",
+    "name": "Medtronic plc",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MEBA318",
+    "name": "Meridian Bank Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "MECA078",
+    "name": "Meridian Capital Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "MEEN138",
+    "name": "Meridian Energy Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "MEFO198",
+    "name": "Meridian Foods Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "MEHO048",
+    "name": "Meridian Holdings Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "MELI",
+    "name": "MercadoLibre Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MELO228",
+    "name": "Meridian Logistics Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "MEMA258",
+    "name": "Meridian Materials Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "MEMO288",
+    "name": "Meridian Motors Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "MEPH108",
+    "name": "Meridian Pharma Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "MERE168",
+    "name": "Meridian Retail Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "MESO348",
+    "name": "Meridian Software Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "MESY018",
+    "name": "Meridian Systems Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Materials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MINDTREE",
+    "name": "Mindtree Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MMC",
+    "name": "Marsh & McLennan Companies Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MNST",
+    "name": "Monster Beverage Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MO",
+    "name": "Altria Group Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MOTHERSON",
+    "name": "Samvardhana Motherson International Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MPHASIS",
+    "name": "Mphasis Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "MRK",
+    "name": "Merck & Co., Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MRNA",
+    "name": "Moderna Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MRVL",
+    "name": "Marvell Technology Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MS",
+    "name": "Morgan Stanley",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MU",
+    "name": "Micron Technology Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "name": "Muthoot Finance Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "NAUKRI",
+    "name": "Info Edge India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "NCLH",
+    "name": "Norwegian Cruise Line Holdings Ltd.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NEBA325",
+    "name": "Nexus Bank Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "NECA085",
+    "name": "Nexus Capital Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "NEE",
+    "name": "NextEra Energy Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NEEN145",
+    "name": "Nexus Energy Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "NEFO205",
+    "name": "Nexus Foods Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "NEHO055",
+    "name": "Nexus Holdings Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "NELO235",
+    "name": "Nexus Logistics Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "NEMA265",
+    "name": "Nexus Materials Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "NEMO295",
+    "name": "Nexus Motors Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "NEPH115",
+    "name": "Nexus Pharma Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "NERE175",
+    "name": "Nexus Retail Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "NESO355",
+    "name": "Nexus Software Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "NESTLEIND",
+    "name": "Nestle India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "NESY025",
+    "name": "Nexus Systems Corp.",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "sector": "Industrials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "NET",
+    "name": "Cloudflare Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "NIBA310",
+    "name": "Nimbus Bank Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "NICA070",
+    "name": "Nimbus Capital Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "NIEN130",
+    "name": "Nimbus Energy Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "NIFO190",
+    "name": "Nimbus Foods Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "NIHO040",
+    "name": "Nimbus Holdings Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "NILO220",
+    "name": "Nimbus Logistics Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "NIMA250",
+    "name": "Nimbus Materials Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "NIMO280",
+    "name": "Nimbus Motors Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "NIO",
+    "name": "NIO Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NIPH100",
+    "name": "Nimbus Pharma Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "NIRE160",
+    "name": "Nimbus Retail Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "NISO340",
+    "name": "Nimbus Software Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Software"
+  },
+  {
+    "symbol": "NISY010",
+    "name": "Nimbus Systems Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Real Estate",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "NKE",
+    "name": "NIKE, Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NOBA302",
+    "name": "Nova Bank Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "NOCA062",
+    "name": "Nova Capital Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "NOEN122",
+    "name": "Nova Energy Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "NOFO182",
+    "name": "Nova Foods Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "NOHO032",
+    "name": "Nova Holdings Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "NOLO212",
+    "name": "Nova Logistics Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "NOMA242",
+    "name": "Nova Materials Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "NOMO272",
+    "name": "Nova Motors Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "NOPH092",
+    "name": "Nova Pharma Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "NORE152",
+    "name": "Nova Retail Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "NOSO332",
+    "name": "Nova Software Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "NOSY002",
+    "name": "Nova Systems Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Financial Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "NOW",
+    "name": "ServiceNow Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NTPC",
+    "name": "NTPC Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "NXPI",
+    "name": "NXP Semiconductors N.V.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "NYKAA",
+    "name": "FSN E-Commerce Ventures Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "name": "Oberoi Realty Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ODFL",
+    "name": "Old Dominion Freight Line Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "OFSS",
+    "name": "Oracle Financial Services Software Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ON",
+    "name": "ON Semiconductor Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ONGC",
+    "name": "Oil and Natural Gas Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ORBA324",
+    "name": "Orion Bank Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "ORCA084",
+    "name": "Orion Capital Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "ORCL",
+    "name": "Oracle Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OREN144",
+    "name": "Orion Energy Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "ORFO204",
+    "name": "Orion Foods Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "ORHO054",
+    "name": "Orion Holdings Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "ORLO234",
+    "name": "Orion Logistics Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "ORLY",
+    "name": "OReilly Automotive Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ORMA264",
+    "name": "Orion Materials Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "ORMO294",
+    "name": "Orion Motors Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "ORPH114",
+    "name": "Orion Pharma Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "ORRE174",
+    "name": "Orion Retail Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "ORSO354",
+    "name": "Orion Software Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Software"
+  },
+  {
+    "symbol": "ORSY024",
+    "name": "Orion Systems Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Consumer",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "PAGEIND",
+    "name": "Page Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PANW",
+    "name": "Palo Alto Networks Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PATH",
+    "name": "UiPath Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PAYTM",
+    "name": "One 97 Communications Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PAYX",
+    "name": "Paychex Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PCAR",
+    "name": "PACCAR Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PEP",
+    "name": "PepsiCo, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PERSISTENT",
+    "name": "Persistent Systems Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PFC",
+    "name": "Power Finance Corporation Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PFE",
+    "name": "Pfizer Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PG",
+    "name": "Procter & Gamble Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PGR",
+    "name": "Progressive Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PIBA309",
+    "name": "Pioneer Bank Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "PICA069",
+    "name": "Pioneer Capital Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "Pidilite Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PIEN129",
+    "name": "Pioneer Energy Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "PIFO189",
+    "name": "Pioneer Foods Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "PIHO039",
+    "name": "Pioneer Holdings Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "PIIND",
+    "name": "PI Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PILO219",
+    "name": "Pioneer Logistics Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "PIMA249",
+    "name": "Pioneer Materials Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "PIMO279",
+    "name": "Pioneer Motors Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "PIPH099",
+    "name": "Pioneer Pharma Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "PIRE159",
+    "name": "Pioneer Retail Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "PISO339",
+    "name": "Pioneer Software Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Software"
+  },
+  {
+    "symbol": "PISY009",
+    "name": "Pioneer Systems Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Communication Services",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "PLD",
+    "name": "Prologis Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PLTR",
+    "name": "Palantir Technologies Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PNB",
+    "name": "Punjab National Bank",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PNC",
+    "name": "PNC Financial Services Group Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "POLYCAB",
+    "name": "Polycab India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "POWERGRID",
+    "name": "Power Grid Corporation of India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PRBA303",
+    "name": "Prime Bank Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "PRCA063",
+    "name": "Prime Capital Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "PREN123",
+    "name": "Prime Energy Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "PRESTIGE",
+    "name": "Prestige Estates Projects Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "PRFO183",
+    "name": "Prime Foods Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "PRHO033",
+    "name": "Prime Holdings Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "PRLO213",
+    "name": "Prime Logistics Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "PRMA243",
+    "name": "Prime Materials Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "PRMO273",
+    "name": "Prime Motors Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "PRPH093",
+    "name": "Prime Pharma Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "PRRE153",
+    "name": "Prime Retail Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "PRSO333",
+    "name": "Prime Software Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Software"
+  },
+  {
+    "symbol": "PRSY003",
+    "name": "Prime Systems Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Healthcare",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "PYPL",
+    "name": "PayPal Holdings, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "QCOM",
+    "name": "QUALCOMM Incorporated",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "QUBA308",
+    "name": "Quantum Bank Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "QUCA068",
+    "name": "Quantum Capital Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "QUEN128",
+    "name": "Quantum Energy Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "QUFO188",
+    "name": "Quantum Foods Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "QUHO038",
+    "name": "Quantum Holdings Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "QULO218",
+    "name": "Quantum Logistics Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "QUMA248",
+    "name": "Quantum Materials Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "QUMO278",
+    "name": "Quantum Motors Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "QUPH098",
+    "name": "Quantum Pharma Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "QURE158",
+    "name": "Quantum Retail Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "QUSO338",
+    "name": "Quantum Software Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "QUSY008",
+    "name": "Quantum Systems Corp.",
+    "exchange": "NYSE",
+    "country": "US",
+    "sector": "Materials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "RABA323",
+    "name": "Radiant Bank plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "RACA083",
+    "name": "Radiant Capital plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "RAEN143",
+    "name": "Radiant Energy plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "RAFO203",
+    "name": "Radiant Foods plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "RAHO053",
+    "name": "Radiant Holdings plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "RALO233",
+    "name": "Radiant Logistics plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "RAMA263",
+    "name": "Radiant Materials plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "RAMO293",
+    "name": "Radiant Motors plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "RAPH113",
+    "name": "Radiant Pharma plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "RARE173",
+    "name": "Radiant Retail plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "RASO353",
+    "name": "Radiant Software plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Software"
+  },
+  {
+    "symbol": "RASY023",
+    "name": "Radiant Systems plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Healthcare",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "RBLX",
+    "name": "Roblox Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RCL",
+    "name": "Royal Caribbean Cruises Ltd.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RECLTD",
+    "name": "REC Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "REGN",
+    "name": "Regeneron Pharmaceuticals Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ROP",
+    "name": "Roper Technologies Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "ROST",
+    "name": "Ross Stores Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RVNL",
+    "name": "Rail Vikas Nigam Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SABA327",
+    "name": "Sapphire Bank Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "SACA087",
+    "name": "Sapphire Capital Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "SAEN147",
+    "name": "Sapphire Energy Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "SAFO207",
+    "name": "Sapphire Foods Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "SAHO057",
+    "name": "Sapphire Holdings Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "SAIL",
+    "name": "Steel Authority of India Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SALO237",
+    "name": "Sapphire Logistics Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "SAMA267",
+    "name": "Sapphire Materials Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "SAMO297",
+    "name": "Sapphire Motors Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "SAP",
+    "name": "SAP SE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SAPH117",
+    "name": "Sapphire Pharma Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "SARE177",
+    "name": "Sapphire Retail Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "SASO357",
+    "name": "Sapphire Software Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Software"
+  },
+  {
+    "symbol": "SASY027",
+    "name": "Sapphire Systems Ltd.",
+    "exchange": "NSE",
+    "country": "IN",
+    "sector": "Utilities",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "SBILIFE",
+    "name": "SBI Life Insurance Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SBUX",
+    "name": "Starbucks Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "SCHW",
+    "name": "Charles Schwab Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SHOP",
+    "name": "Shopify Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "name": "Shriram Finance Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SHW",
+    "name": "Sherwin-Williams Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SIEMENS",
+    "name": "Siemens Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SLB",
+    "name": "Schlumberger Limited",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SNOW",
+    "name": "Snowflake Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SNPS",
+    "name": "Synopsys Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "SO",
+    "name": "Southern Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SONY",
+    "name": "Sony Group Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SPGI",
+    "name": "S&P Global Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SQ",
+    "name": "Block Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SRF",
+    "name": "SRF Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "STBA311",
+    "name": "Sterling Bank plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "STCA071",
+    "name": "Sterling Capital plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "STEN131",
+    "name": "Sterling Energy plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "STFO191",
+    "name": "Sterling Foods plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "STHO041",
+    "name": "Sterling Holdings plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "STLO221",
+    "name": "Sterling Logistics plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "STMA251",
+    "name": "Sterling Materials plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "STMO281",
+    "name": "Sterling Motors plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "STPH101",
+    "name": "Sterling Pharma plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "STRE161",
+    "name": "Sterling Retail plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "STSO341",
+    "name": "Sterling Software plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Software"
+  },
+  {
+    "symbol": "STSY011",
+    "name": "Sterling Systems plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Technology",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "SUBA305",
+    "name": "Summit Bank plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "SUCA065",
+    "name": "Summit Capital plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "SUEN125",
+    "name": "Summit Energy plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "SUFO185",
+    "name": "Summit Foods plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "SUHO035",
+    "name": "Summit Holdings plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "SULO215",
+    "name": "Summit Logistics plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "SUMA245",
+    "name": "Summit Materials plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "SUMO275",
+    "name": "Summit Motors plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "SUPH095",
+    "name": "Summit Pharma plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "SURE155",
+    "name": "Summit Retail plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "SUSO335",
+    "name": "Summit Software plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Software"
+  },
+  {
+    "symbol": "SUSY005",
+    "name": "Summit Systems plc",
+    "exchange": "LSE",
+    "country": "GB",
+    "sector": "Industrials",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "SYK",
+    "name": "Stryker Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "T",
+    "name": "AT&T Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TATACHEM",
+    "name": "Tata Chemicals Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TATAELXSI",
+    "name": "Tata Elxsi Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TATAMOTORS",
+    "name": "Tata Motors Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TATAPOWER",
+    "name": "Tata Power Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TATASTEEL",
+    "name": "Tata Steel Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TEAM",
+    "name": "Atlassian Corporation",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "TECHM",
+    "name": "Tech Mahindra Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TGT",
+    "name": "Target Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TITAN",
+    "name": "Titan Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TJX",
+    "name": "TJX Companies Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TMO",
+    "name": "Thermo Fisher Scientific Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TMUS",
+    "name": "T-Mobile US Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "name": "Torrent Pharmaceuticals Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TRENT",
+    "name": "Trent Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla, Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TTWO",
+    "name": "Take-Two Interactive Software Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "name": "TVS Motor Company Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "TXN",
+    "name": "Texas Instruments Incorporated",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "U",
+    "name": "Unity Software Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UAL",
+    "name": "United Airlines Holdings Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UBER",
+    "name": "Uber Technologies Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UBL",
+    "name": "United Breweries Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "name": "UltraTech Cement Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "UNH",
+    "name": "UnitedHealth Group Incorporated",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UNIONBANK",
+    "name": "Union Bank of India",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "UNP",
+    "name": "Union Pacific Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UPL",
+    "name": "UPL Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "UPS",
+    "name": "United Parcel Service Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "USB",
+    "name": "U.S. Bancorp",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "V",
+    "name": "Visa Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VEBA304",
+    "name": "Vector Bank Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "VEBA306",
+    "name": "Vertex Bank Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "VEBA330",
+    "name": "Velocity Bank Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "VECA064",
+    "name": "Vector Capital Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "VECA066",
+    "name": "Vertex Capital Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "VECA090",
+    "name": "Velocity Capital Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "VEDL",
+    "name": "Vedanta Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "VEEN124",
+    "name": "Vector Energy Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "VEEN126",
+    "name": "Vertex Energy Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "VEEN150",
+    "name": "Velocity Energy Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "VEFO184",
+    "name": "Vector Foods Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "VEFO186",
+    "name": "Vertex Foods Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "VEFO210",
+    "name": "Velocity Foods Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "VEHO034",
+    "name": "Vector Holdings Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "VEHO036",
+    "name": "Vertex Holdings Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "VEHO060",
+    "name": "Velocity Holdings Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "VELO214",
+    "name": "Vector Logistics Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "VELO216",
+    "name": "Vertex Logistics Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "VELO240",
+    "name": "Velocity Logistics Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "VEMA244",
+    "name": "Vector Materials Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "VEMA246",
+    "name": "Vertex Materials Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "VEMA270",
+    "name": "Velocity Materials Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "VEMO274",
+    "name": "Vector Motors Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "VEMO276",
+    "name": "Vertex Motors Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "VEMO300",
+    "name": "Velocity Motors Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "VEPH094",
+    "name": "Vector Pharma Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "VEPH096",
+    "name": "Vertex Pharma Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "VEPH120",
+    "name": "Velocity Pharma Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "VERE154",
+    "name": "Vector Retail Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "VERE156",
+    "name": "Vertex Retail Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "VERE180",
+    "name": "Velocity Retail Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "VESO334",
+    "name": "Vector Software Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Software"
+  },
+  {
+    "symbol": "VESO336",
+    "name": "Vertex Software Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Software"
+  },
+  {
+    "symbol": "VESO360",
+    "name": "Velocity Software Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Software"
+  },
+  {
+    "symbol": "VESY004",
+    "name": "Vector Systems Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Consumer",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "VESY006",
+    "name": "Vertex Systems Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Energy",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "VESY030",
+    "name": "Velocity Systems Corp.",
+    "exchange": "TSX",
+    "country": "CA",
+    "sector": "Real Estate",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "VOLTAS",
+    "name": "Voltas Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "VRSK",
+    "name": "Verisk Analytics Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "VRTX",
+    "name": "Vertex Pharmaceuticals Incorporated",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "VZ",
+    "name": "Verizon Communications Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WBD",
+    "name": "Warner Bros. Discovery Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "WDAY",
+    "name": "Workday Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "WFC",
+    "name": "Wells Fargo & Company",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WIPRO",
+    "name": "Wipro Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "WM",
+    "name": "Waste Management Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WMT",
+    "name": "Walmart Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "XEL",
+    "name": "Xcel Energy Inc.",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "XOM",
+    "name": "Exxon Mobil Corporation",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "XPEV",
+    "name": "XPeng Inc.",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "YESBANK",
+    "name": "Yes Bank Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ZEBA316",
+    "name": "Zenith Bank Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Bank"
+  },
+  {
+    "symbol": "ZECA076",
+    "name": "Zenith Capital Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Capital"
+  },
+  {
+    "symbol": "ZEEN136",
+    "name": "Zenith Energy Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Energy"
+  },
+  {
+    "symbol": "ZEFO196",
+    "name": "Zenith Foods Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Foods"
+  },
+  {
+    "symbol": "ZEHO046",
+    "name": "Zenith Holdings Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Holdings"
+  },
+  {
+    "symbol": "ZELO226",
+    "name": "Zenith Logistics Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Logistics"
+  },
+  {
+    "symbol": "ZEMA256",
+    "name": "Zenith Materials Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Materials"
+  },
+  {
+    "symbol": "ZEMO286",
+    "name": "Zenith Motors Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Motors"
+  },
+  {
+    "symbol": "ZEPH106",
+    "name": "Zenith Pharma Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Pharma"
+  },
+  {
+    "symbol": "ZERE166",
+    "name": "Zenith Retail Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Retail"
+  },
+  {
+    "symbol": "ZESO346",
+    "name": "Zenith Software Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Software"
+  },
+  {
+    "symbol": "ZESY016",
+    "name": "Zenith Systems Ltd.",
+    "exchange": "BSE",
+    "country": "IN",
+    "sector": "Energy",
+    "industry": "Systems"
+  },
+  {
+    "symbol": "ZOMATO",
+    "name": "Eternal Ltd.",
+    "exchange": "NSE"
+  },
+  {
+    "symbol": "ZS",
+    "name": "Zscaler Inc.",
+    "exchange": "NASDAQ"
+  }
+]
