@@ -64,6 +64,8 @@ const env = {
   geminiApiKey: readEnv('GEMINI_API_KEY'),
   geminiModel: readEnv('GEMINI_MODEL', 'gemini-2.0-flash'),
   coinGeckoApiKey: readEnv('COINGECKO_API_KEY'),
+  resendApiKey: readEnv('RESEND_API_KEY'),
+  emailFromDomain: readEnv('EMAIL_FROM_DOMAIN', 'stockiq.app'),
 };
 
 module.exports = { env, validateEnv, appName, localMongoUri };

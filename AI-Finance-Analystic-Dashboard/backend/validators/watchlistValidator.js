@@ -7,19 +7,19 @@ const createWatchlistValidator = [
 ];
 
 const addWatchlistItemValidator = [
-  param('watchlistId').isMongoId().withMessage('A valid watchlist id is required'),
+  param('watchlistId').trim().isLength({ min: 3, max: 64 }).withMessage('A valid watchlist id is required'),
   body('assetType').isIn(['stock', 'crypto', 'mutual_fund']).withMessage('Asset type must be stock, crypto, or mutual_fund'),
   body('symbol').trim().isLength({ min: 1, max: 24 }).withMessage('Symbol is required'),
   validateRequest,
 ];
 
 const watchlistIdValidator = [
-  param('watchlistId').isMongoId().withMessage('A valid watchlist id is required'),
+  param('watchlistId').trim().isLength({ min: 3, max: 64 }).withMessage('A valid watchlist id is required'),
   validateRequest,
 ];
 
 const removeWatchlistItemValidator = [
-  param('watchlistId').isMongoId().withMessage('A valid watchlist id is required'),
+  param('watchlistId').trim().isLength({ min: 3, max: 64 }).withMessage('A valid watchlist id is required'),
   param('symbol').trim().isLength({ min: 1, max: 24 }).withMessage('Symbol is required'),
   validateRequest,
 ];

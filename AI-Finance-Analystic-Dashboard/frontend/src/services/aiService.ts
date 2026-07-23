@@ -89,4 +89,9 @@ export const aiService = {
     const response = await api.get<ApiResponse<AITransactionInsightPayload>>(endpoints.ai.transactions, { params });
     return response.data.data;
   },
+
+  async chat(message: string, history: Array<{ sender: 'user' | 'bot'; text: string }>) {
+    const response = await api.post<ApiResponse<{ text: string }>>(endpoints.ai.chat, { message, history });
+    return response.data.data;
+  },
 };

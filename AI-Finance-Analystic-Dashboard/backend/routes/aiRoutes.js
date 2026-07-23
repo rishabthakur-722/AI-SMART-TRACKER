@@ -7,6 +7,7 @@ const {
   getMarketTrends,
   getSummary,
   getTransactionInsights,
+  chat,
 } = require('../controllers/aiController');
 const { protect } = require('../middleware/authMiddleware');
 
@@ -19,5 +20,6 @@ router.get('/suggestions', getSuggestions);
 router.get('/news-sentiment', getNewsSentiment);
 router.get('/market-trends', getMarketTrends);
 router.get('/transactions', protect, getTransactionInsights);
+router.post('/chat', protect, chat);
 
 module.exports = router;

@@ -104,52 +104,51 @@ export default function WatchlistPage() {
   }
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6 page-enter">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">Watchlists</p>
-          <h1 className="mt-3 text-4xl font-semibold">Track conviction</h1>
-          <p className="mt-2 text-white/56">Create focused watchlists and monitor price, trend, and mini-chart movement.</p>
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-400 font-mono">Watchlist Workspace</p>
+          <h1 className="mt-2 text-4xl font-extrabold font-display tracking-tight text-white">Track Conviction</h1>
+          <p className="mt-1 text-sm text-white/50">Create focused tracking boards, monitor real-time pricing waves, RSI deviations, and stop-loss targets.</p>
         </div>
-        <Button variant="danger" onClick={() => void removeWatchlist()} disabled={!selectedWatchlistId}>
-          <Trash2 size={17} />
-          Remove watchlist
+        <Button variant="danger" onClick={() => void removeWatchlist()} disabled={!selectedWatchlistId} className="h-10 rounded-xl">
+          <Trash2 size={16} />
+          Remove Board
         </Button>
       </div>
 
       <div className="grid gap-4 xl:grid-cols-[360px_1fr]">
         <div className="space-y-4">
-          <Card>
+          <Card className="border-white/[0.08] bg-[#111115]/80">
             <CardHeader>
-              <CardTitle>Add watchlist</CardTitle>
+              <CardTitle>Create Tracker Board</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={createWatchlist} className="space-y-3">
                 <input
                   value={name}
                   onChange={(event) => setName(event.target.value)}
-                  className="h-11 w-full rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-emerald-300"
-                  placeholder="Watchlist name"
+                  className="h-11 w-full rounded-xl border border-white/[0.08] bg-black/40 px-3 text-sm text-white outline-none focus:border-indigo-500/40"
+                  placeholder="Board name (e.g. Bluechips)"
                   required
                 />
-                <Button type="submit" className="w-full">
-                  <Plus size={17} />
-                  Create
+                <Button type="submit" className="w-full h-10 rounded-xl bg-indigo-500 hover:bg-indigo-600">
+                  Create Tracker
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-white/[0.08] bg-[#111115]/80">
             <CardHeader>
-              <CardTitle>Search stock</CardTitle>
+              <CardTitle>Add Asset to Board</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={addItem} className="space-y-3">
                 <select
                   value={selectedWatchlistId}
                   onChange={(event) => setSelectedWatchlistId(event.target.value)}
-                  className="h-11 w-full rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none"
+                  className="h-11 w-full rounded-xl border border-white/[0.08] bg-black/40 px-3 text-sm text-white outline-none focus:border-indigo-500/40"
                 >
                   {watchlists.map((watchlist) => (
                     <option key={watchlist._id} value={watchlist._id}>
@@ -160,7 +159,7 @@ export default function WatchlistPage() {
                 <select
                   value={assetType}
                   onChange={(event) => setAssetType(event.target.value as AssetType)}
-                  className="h-11 w-full rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none"
+                  className="h-11 w-full rounded-xl border border-white/[0.08] bg-black/40 px-3 text-sm text-white outline-none focus:border-indigo-500/40"
                 >
                   <option value="stock">Stock</option>
                   <option value="crypto">Crypto</option>
@@ -170,8 +169,8 @@ export default function WatchlistPage() {
                   list="watchlist-symbols"
                   value={symbol}
                   onChange={(event) => setSymbol(event.target.value)}
-                  className="h-11 w-full rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-emerald-300"
-                  placeholder="Search symbol"
+                  className="h-11 w-full rounded-xl border border-white/[0.08] bg-black/40 px-3 text-sm text-white outline-none focus:border-indigo-500/40"
+                  placeholder="Search symbol (e.g. RELIANCE)"
                   required
                 />
                 <datalist id="watchlist-symbols">
@@ -181,24 +180,27 @@ export default function WatchlistPage() {
                     </option>
                   ))}
                 </datalist>
-                <Button type="submit" className="w-full" disabled={!selectedWatchlistId}>
-                  Add asset
+                <Button type="submit" className="w-full h-10 rounded-xl bg-indigo-500 hover:bg-indigo-600" disabled={!selectedWatchlistId}>
+                  Add Asset
                 </Button>
               </form>
             </CardContent>
           </Card>
         </div>
 
-        <Card>
-          <CardHeader className="flex flex-col justify-between gap-3 md:flex-row md:items-center">
-            <CardTitle>{selectedWatchlist?.name || 'Watchlist'}</CardTitle>
-            <label className="flex h-10 w-full items-center gap-2 rounded-md border border-white/10 bg-black/30 px-3 md:max-w-xs">
-              <Search size={16} className="text-white/38" />
+        <Card className="border-white/[0.08] bg-[#111115]/80">
+          <CardHeader className="flex flex-col justify-between gap-3 md:flex-row md:items-center border-b border-white/[0.06]">
+            <div>
+              <CardTitle>{selectedWatchlist?.name || 'Watchlist Tracker'}</CardTitle>
+              <p className="text-xs text-white/40">Real-time status of monitored convictions inside this board.</p>
+            </div>
+            <label className="flex h-10 w-full items-center gap-2 rounded-xl border border-white/[0.08] bg-black/30 px-3 md:max-w-xs focus-within:border-indigo-500/40 transition">
+              <Search size={16} className="text-white/30" />
               <input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                className="w-full bg-transparent text-sm outline-none placeholder:text-white/36"
-                placeholder="Filter watchlist"
+                className="w-full bg-transparent text-sm outline-none placeholder:text-white/20"
+                placeholder="Fuzzy search board symbols..."
               />
             </label>
           </CardHeader>

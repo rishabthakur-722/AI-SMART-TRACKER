@@ -40,6 +40,22 @@ const getTransactionInsights = asyncHandler(async (req, res) => {
   return sendSuccess(res, 200, 'AI transaction insights loaded successfully', analytics.aiInsights);
 });
 
+const chat = asyncHandler(async (req, res) => {
+  const { message, history } = req.body;
+  let portfolioContext = null;
+
+  if (req.user) {
+    try {
+      portfolioContext = await portfolioService.buildAnalytics(req.user._id);
+    } catch (error) {
+      // Silent catch to handle missing database or auth failures gracefully
+    }
+  }
+
+  const result = await aiService.chat({ message, history, portfolioContext });
+  return sendSuccess(res, 200, 'AI response generated successfully', result);
+});
+
 module.exports = {
   getInsights,
   getRisk,
@@ -48,4 +64,5 @@ module.exports = {
   getMarketTrends,
   getSummary,
   getTransactionInsights,
+  chat,
 };

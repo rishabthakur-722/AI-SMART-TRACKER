@@ -22,6 +22,7 @@ const transactionRoutes = require('./routes/transactionRoutes');
 const watchlistRoutes = require('./routes/watchlistRoutes');
 const watchlistSimpleRoutes = require('./routes/watchlistSimpleRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
+const notificationRoutes = require('./routes/notificationRoutes');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
@@ -116,6 +117,7 @@ app.use('/api/transactions', transactionRoutes);
 app.use('/api/watchlist', watchlistSimpleRoutes);
 app.use('/api/watchlists', watchlistRoutes);
 app.use('/api/settings', settingsRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

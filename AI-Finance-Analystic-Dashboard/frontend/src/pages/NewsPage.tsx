@@ -8,6 +8,7 @@ import Skeleton from '../components/ui/Skeleton';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { marketService } from '../services/marketService';
 import type { NewsArticle, SentimentAnalysis } from '../types/domain';
+import BreakingNewsTicker from '../components/news/BreakingNewsTicker';
 
 export default function NewsPage() {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
@@ -94,39 +95,40 @@ export default function NewsPage() {
   }
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6 page-enter">
+      {/* News Ticker */}
+      {articles.length > 0 && <BreakingNewsTicker articles={articles} />}
+
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">News</p>
-          <h1 className="mt-3 text-4xl font-semibold">News sentiment</h1>
-          <p className="mt-2 max-w-3xl text-white/56">
-            Categorized market headlines with symbol-level sentiment, confidence scores, and positive or negative signal coloring.
-          </p>
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-400 font-mono">Real-Time News Stream</p>
+          <h1 className="mt-2 text-4xl font-extrabold font-display tracking-tight text-white">Sentiment Desk</h1>
+          <p className="mt-1 text-sm text-white/50">Categorized global headlines with symbol-level AI sentiment scoring and estimated price impact assessments.</p>
         </div>
         <Tabs tabs={categories} value={category} onChange={setCategory} />
       </div>
 
       <div className="grid gap-4 xl:grid-cols-[1fr_420px]">
-        <Card>
+        <Card className="border-white/[0.08] bg-[#111115]/50">
           <CardContent>
-            <label className="flex h-11 items-center gap-3 rounded-md border border-white/10 bg-black/30 px-3">
-              <Search size={18} className="text-white/40" />
+            <label className="flex h-11 items-center gap-3 rounded-xl border border-white/[0.08] bg-black/30 px-3.5 focus-within:border-indigo-500/40 transition">
+              <Search size={18} className="text-white/30" />
               <input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/36"
-                placeholder="Search by headline, source, or symbol"
+                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/20"
+                placeholder="Search headlines, sources, or stock tickers..."
               />
             </label>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-white/[0.08] bg-[#111115]/50">
           <CardContent className="grid grid-cols-3 gap-3">
             {sentimentDistribution.map((item) => (
-              <div key={item.label} className="rounded-md border border-white/10 bg-black/20 p-3 text-center">
+              <div key={item.label} className="rounded-xl border border-white/[0.08] bg-black/25 p-3 text-center">
                 <Badge tone={item.tone}>{item.label}</Badge>
-                <p className="mt-3 text-2xl font-semibold">{item.value}%</p>
+                <p className="mt-2 text-2xl font-bold font-display text-white">{item.value}%</p>
               </div>
             ))}
           </CardContent>

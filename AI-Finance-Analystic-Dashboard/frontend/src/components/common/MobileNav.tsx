@@ -18,20 +18,22 @@ const navItems = [
 
 export default function MobileNav() {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 flex gap-1 overflow-x-auto border-t border-white/10 bg-[#0A0A0A]/95 px-2 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] backdrop-blur-xl lg:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-40 flex gap-1 overflow-x-auto border-t border-white/[0.08] bg-[#0A0A0A]/95 px-2 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] backdrop-blur-xl lg:hidden card-shadow">
       {navItems.map((item) => (
         <NavLink
           key={item.href}
           to={item.href}
           className={({ isActive }) =>
             cn(
-              'flex min-w-[76px] flex-col items-center gap-1 rounded-md px-2 py-2 text-[11px] font-semibold transition',
-              isActive ? 'bg-white/[0.08] text-emerald-300' : 'text-white/52'
+              'flex min-w-[76px] flex-col items-center gap-1 rounded-lg px-2 py-1.5 text-[10px] font-semibold transition-all duration-150',
+              isActive 
+                ? 'bg-indigo-500/15 text-indigo-300 border border-indigo-500/10' 
+                : 'text-white/46 border border-transparent hover:text-white/70'
             )
           }
         >
-          <item.icon size={18} />
-          {item.label}
+          <item.icon size={16} className="transition-colors duration-150" />
+          <span>{item.label}</span>
         </NavLink>
       ))}
     </nav>

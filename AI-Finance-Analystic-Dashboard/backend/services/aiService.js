@@ -181,6 +181,82 @@ const getSmartSuggestions = getSuggestions;
 
 const { getOrSetCache } = require('../utils/cache');
 
+const aiChat = async ({ message, history = [], portfolioContext = null }) => {
+  const systemPrompt = [
+    'You are StockIQ AI, a premium real-time financial intelligence copilot.',
+    'You help users analyze stocks, explain technical indicators, suggest portfolio allocation, perform risk analysis, and answer market questions.',
+    'Be professional, quantitative, clear, and direct. Use markdown for tables and bullets.',
+    portfolioContext ? `Here is the user's portfolio context:\n${JSON.stringify(portfolioContext, null, 2)}` : 'The user has no portfolio assets loaded yet.',
+  ].join('\n');
+
+  const messages = [
+    { role: 'system', content: systemPrompt },
+    ...history.map((msg) => ({
+      role: msg.sender === 'user' ? 'user' : 'assistant',
+      content: msg.text,
+    })),
+    { role: 'user', content: message },
+  ];
+
+  if (env.geminiApiKey) {
+    try {
+      const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${env.geminiModel}:generateContent?key=${env.geminiApiKey}`;
+      const response = await providerFetchJson(geminiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: messages.map((m) => ({
+            role: m.role === 'system' || m.role === 'user' ? 'user' : 'model',
+            parts: [{ text: (m.role === 'system' ? '[SYSTEM PROMPT]\n' : '') + m.content }],
+          })),
+          generationConfig: {
+            temperature: 0.7,
+            maxOutputTokens: 1024,
+          },
+        }),
+      });
+
+      const text = response.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (text) return { text };
+    } catch (e) {
+      console.error('[Gemini Chat Error]', e.message);
+    }
+  }
+
+  if (env.groqApiKey) {
+    try {
+      const response = await providerFetchJson(groqBaseUrl, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${env.groqApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: env.groqModel,
+          temperature: 0.7,
+          messages: messages,
+        }),
+      });
+
+      const text = response.choices?.[0]?.message?.content;
+      if (text) return { text };
+    } catch (e) {
+      console.error('[Groq Chat Error]', e.message);
+    }
+  }
+
+  return {
+    text: `### StockIQ AI Copilot (Offline Mode)
+I received your message: "${message}".
+Please configure your \`GEMINI_API_KEY\` or \`GROQ_API_KEY\` in the backend \`.env\` file to activate live responses.
+
+**Quick Action Links:**
+* Go to [Markets](/markets) to view live prices.
+* Go to [Portfolio](/portfolio) to see your virtual wallet.
+* Go to [AI Insights](/ai-insights) to review pre-calculated analytics.`,
+  };
+};
+
 const aiService = {
   getInsights: (filters = {}) => getOrSetCache(`ai_insights_${JSON.stringify(filters)}`, () => getInsights(filters), env.cacheTtlAi),
   getRisk: (filters = {}) => getOrSetCache(`ai_risk_${JSON.stringify(filters)}`, () => getRisk(filters), env.cacheTtlAi),
@@ -192,6 +268,7 @@ const aiService = {
   getRiskDetection,
   getSmartSuggestions,
   getCombinedSummary: (filters = {}) => getOrSetCache(`ai_summary_${JSON.stringify(filters)}`, () => getCombinedSummary(filters), env.cacheTtlAi),
+  chat: aiChat,
 };
 
 module.exports = aiService;

@@ -32,6 +32,7 @@ export const endpoints = {
     newsSentiment: '/ai/news-sentiment',
     marketTrends: '/ai/market-trends',
     transactions: '/ai/transactions',
+    chat: '/ai/chat',
   },
   dashboard: {
     summary: '/dashboard/summary',
