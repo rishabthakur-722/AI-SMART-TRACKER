@@ -8,6 +8,8 @@ import MobileNav from '../components/common/MobileNav';
 import Navbar from '../components/common/Navbar';
 import Sidebar from '../components/common/Sidebar';
 import CommandPalette from '../components/common/CommandPalette';
+import { useTheme } from '../context/ThemeContext';
+import { cn } from '../utils/cn';
 
 const pageVariants = {
   initial: { opacity: 0, y: 8 },
@@ -33,10 +35,17 @@ function PageWrapper() {
 }
 
 export default function AppLayout() {
+  const { theme } = useTheme();
+
   return (
     <SidebarProvider>
       <CommandPaletteProvider>
-        <div className="min-h-screen overflow-x-hidden bg-[#0A0A0A] text-white bg-mesh">
+        <div
+          className={cn(
+            'min-h-screen overflow-x-hidden text-white bg-mesh transition-colors duration-300',
+            theme === 'dark' ? 'bg-[#0A0A0A]' : 'theme-light-shell bg-slate-50'
+          )}
+        >
           <Sidebar />
           <CommandPalette />
           <div className="transition-all duration-300 lg:pl-72" id="main-content">

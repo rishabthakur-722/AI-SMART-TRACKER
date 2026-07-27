@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Bell, BrainCircuit, TrendingUp, X, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 
 const mockNotifications = [
@@ -11,22 +12,25 @@ const mockNotifications = [
     message: 'Daily market summary has been generated for today.',
     time: '2m ago',
     read: false,
+    href: '/ai-insights',
   },
   {
     id: '2',
     type: 'price',
-    title: 'Price Alert — RELIANCE',
-    message: 'RELIANCE crossed ₹2,850 resistance level.',
+    title: 'Price Alert - RELIANCE',
+    message: 'RELIANCE crossed INR 2,850 resistance level.',
     time: '15m ago',
     read: false,
+    href: '/markets/RELIANCE',
   },
   {
     id: '3',
     type: 'market',
     title: 'Market Update',
-    message: 'NIFTY 50 up +1.2% — Bullish momentum continues.',
+    message: 'NIFTY 50 up +1.2% - Bullish momentum continues.',
     time: '1h ago',
     read: true,
+    href: '/markets/NIFTY',
   },
   {
     id: '4',
@@ -35,6 +39,7 @@ const mockNotifications = [
     message: 'Your portfolio risk score increased to 72/100.',
     time: '3h ago',
     read: true,
+    href: '/portfolio',
   },
 ];
 
@@ -56,6 +61,7 @@ interface NotificationCenterProps {
 
 export default function NotificationCenter({ onClose }: NotificationCenterProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -67,6 +73,11 @@ export default function NotificationCenter({ onClose }: NotificationCenterProps)
     return () => document.removeEventListener('mousedown', handleClick);
   }, [onClose]);
 
+  const goTo = (href: string) => {
+    navigate(href);
+    onClose();
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -74,9 +85,8 @@ export default function NotificationCenter({ onClose }: NotificationCenterProps)
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 8, scale: 0.97 }}
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-      className="absolute right-0 top-11 z-50 w-80 rounded-xl border border-white/[0.1] bg-[#111115] shadow-[0_16px_64px_rgba(0,0,0,0.5)] overflow-hidden"
+      className="absolute right-0 top-11 z-50 w-80 overflow-hidden rounded-xl border border-white/[0.1] bg-[#111115] shadow-[0_16px_64px_rgba(0,0,0,0.5)]"
     >
-      {/* Header */}
       <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
         <div className="flex items-center gap-2">
           <Bell size={14} className="text-white/60" />
@@ -87,27 +97,30 @@ export default function NotificationCenter({ onClose }: NotificationCenterProps)
         </div>
         <button
           onClick={onClose}
-          className="flex size-6 items-center justify-center rounded-md text-white/40 hover:text-white transition"
+          type="button"
+          className="flex size-6 items-center justify-center rounded-md text-white/40 transition hover:text-white"
+          aria-label="Close notifications"
         >
           <X size={13} />
         </button>
       </div>
 
-      {/* Notifications */}
-      <div className="divide-y divide-white/[0.04] max-h-80 overflow-y-auto">
+      <div className="max-h-80 divide-y divide-white/[0.04] overflow-y-auto">
         {mockNotifications.map((notification) => {
           const Icon = typeIcons[notification.type as keyof typeof typeIcons] || Bell;
           const iconColor = typeColors[notification.type as keyof typeof typeColors] || 'text-white/40 bg-white/5';
 
           return (
-            <div
+            <button
               key={notification.id}
+              type="button"
+              onClick={() => goTo(notification.href)}
               className={cn(
-                'flex gap-3 px-4 py-3 transition hover:bg-white/[0.03] cursor-pointer',
+                'flex w-full cursor-pointer gap-3 px-4 py-3 text-left transition hover:bg-white/[0.03]',
                 !notification.read && 'bg-indigo-500/[0.04]'
               )}
             >
-              <div className={cn('flex size-8 flex-shrink-0 items-center justify-center rounded-lg mt-0.5', iconColor)}>
+              <div className={cn('mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-lg', iconColor)}>
                 <Icon size={14} />
               </div>
               <div className="min-w-0 flex-1">
@@ -115,21 +128,22 @@ export default function NotificationCenter({ onClose }: NotificationCenterProps)
                   <p className={cn('text-sm font-semibold', notification.read ? 'text-white/60' : 'text-white/90')}>
                     {notification.title}
                   </p>
-                  {!notification.read && (
-                    <span className="mt-1 size-1.5 flex-shrink-0 rounded-full bg-indigo-400" />
-                  )}
+                  {!notification.read && <span className="mt-1 size-1.5 flex-shrink-0 rounded-full bg-indigo-400" />}
                 </div>
                 <p className="mt-0.5 text-xs leading-5 text-white/42">{notification.message}</p>
                 <p className="mt-1 text-[10px] text-white/28">{notification.time}</p>
               </div>
-            </div>
+            </button>
           );
         })}
       </div>
 
-      {/* Footer */}
       <div className="border-t border-white/[0.06] px-4 py-2.5">
-        <button className="w-full text-center text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition">
+        <button
+          type="button"
+          onClick={() => goTo('/settings')}
+          className="w-full text-center text-xs font-semibold text-indigo-400 transition hover:text-indigo-300"
+        >
           View all notifications
         </button>
       </div>
