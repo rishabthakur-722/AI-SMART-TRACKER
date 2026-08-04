@@ -34,6 +34,19 @@ const connectDB = async () => {
       console.log(`MongoDB connected: ${connection.connection.host}`);
       return connection;
     } catch (error) {
+      const isAuthFailure = /bad auth|authentication failed/i.test(error.message || '');
+
+      if (env.nodeEnv !== 'production' && isAuthFailure && env.mongoUri !== localMongoUri) {
+        try {
+          console.warn('Atlas credentials were rejected. Falling back to local MongoDB for development.');
+          const localConnection = await mongoose.connect(localMongoUri, connectionOptions);
+          console.log(`MongoDB connected: ${localConnection.connection.host}`);
+          return localConnection;
+        } catch (localError) {
+          console.warn(`Local MongoDB fallback unavailable: ${localError.message}`);
+        }
+      }
+
       if (attempt >= attempts) {
         if (env.nodeEnv === 'production') {
           throw error;

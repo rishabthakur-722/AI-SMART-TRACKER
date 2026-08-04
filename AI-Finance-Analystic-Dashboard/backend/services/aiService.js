@@ -248,7 +248,7 @@ const aiChat = async ({ message, history = [], portfolioContext = null }) => {
   return {
     text: `### StockIQ AI Copilot (Offline Mode)
 I received your message: "${message}".
-Please configure your \`GEMINI_API_KEY\` or \`GROQ_API_KEY\` in the backend \`.env\` file to activate live responses.
+Please configure your \`GEMINI_API_KEY\` or \`GROQ_API_KEY\` in the backend or deployment environment to activate live responses.
 
 **Quick Action Links:**
 * Go to [Markets](/markets) to view live prices.

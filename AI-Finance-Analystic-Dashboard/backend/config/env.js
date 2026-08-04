@@ -4,6 +4,16 @@ const requiredInProduction = ['JWT_SECRET', 'CLIENT_URL', 'SESSION_SECRET'];
 const liveProviderKeys = ['FINNHUB_API_KEY', 'FMP_API_KEY', 'GROQ_API_KEY', 'GEMINI_API_KEY', 'COINGECKO_API_KEY'];
 const isProduction = process.env.NODE_ENV === 'production';
 const isLocalhostUrl = (value) => /^https?:\/\/(localhost|127\.0\.0\.1)(?::\d+)?(?:\/|$)/i.test(value.trim());
+const isPlaceholderMongoUri = (value) => /<[^>]+>/.test(value) || value.includes('mongodb+srv://') && value.includes('<');
+const normalizeMongoUri = (value) => {
+  const trimmed = String(value || '').trim().replace(/^['"]|['"]$/g, '');
+
+  if (!trimmed || isPlaceholderMongoUri(trimmed)) {
+    return '';
+  }
+
+  return trimmed;
+};
 
 const readEnv = (key, fallback = '') => String(process.env[key] || fallback).trim();
 const readBoolean = (key, fallback = false) => {
@@ -27,7 +37,7 @@ const validateEnv = () => {
   }
 
   const missing = requiredInProduction.filter((key) => !readEnv(key));
-  const missingMongoUri = !readEnv('MONGODB_URI') && !readEnv('MONGO_URI');
+  const missingMongoUri = !normalizeMongoUri(process.env.MONGODB_URI) && !normalizeMongoUri(process.env.MONGO_URI);
   const clientUrl = readEnv('CLIENT_URL');
   const googleClientId = readEnv('GOOGLE_CLIENT_ID');
   const googleClientSecret = readEnv('GOOGLE_CLIENT_SECRET');
@@ -59,7 +69,7 @@ const env = {
   nodeEnv: process.env.NODE_ENV || 'development',
   appName: process.env.APP_NAME || appName,
   port: Number(process.env.PORT) || 4000,
-  mongoUri: readEnv('MONGODB_URI') || readEnv('MONGO_URI') || localMongoUri,
+  mongoUri: normalizeMongoUri(process.env.MONGODB_URI) || normalizeMongoUri(process.env.MONGO_URI) || localMongoUri,
   jwtSecret: readEnv('JWT_SECRET', isProduction ? '' : 'local-stockiq-development-secret'),
   jwtExpiresIn: readEnv('JWT_EXPIRES_IN', '7d'),
   jwtCookieExpiresIn: Number(process.env.JWT_COOKIE_EXPIRES_IN) || 7,
