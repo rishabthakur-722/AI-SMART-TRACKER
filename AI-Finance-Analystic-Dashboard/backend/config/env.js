@@ -1,7 +1,9 @@
 const appName = 'StockIQ';
 const localMongoUri = 'mongodb://127.0.0.1:27017/stockiq';
-const requiredInProduction = ['JWT_SECRET', 'CLIENT_URL'];
+const requiredInProduction = ['JWT_SECRET', 'CLIENT_URL', 'SESSION_SECRET'];
 const liveProviderKeys = ['FINNHUB_API_KEY', 'FMP_API_KEY', 'GROQ_API_KEY', 'GEMINI_API_KEY', 'COINGECKO_API_KEY'];
+const isProduction = process.env.NODE_ENV === 'production';
+const isLocalhostUrl = (value) => /^https?:\/\/(localhost|127\.0\.0\.1)(?::\d+)?(?:\/|$)/i.test(value.trim());
 
 const readEnv = (key, fallback = '') => String(process.env[key] || fallback).trim();
 const readBoolean = (key, fallback = false) => {
@@ -20,20 +22,35 @@ const readPositiveInteger = (key, fallback) => {
 };
 
 const validateEnv = () => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (!isProduction) {
     return;
   }
 
   const missing = requiredInProduction.filter((key) => !readEnv(key));
   const missingMongoUri = !readEnv('MONGODB_URI') && !readEnv('MONGO_URI');
+  const clientUrl = readEnv('CLIENT_URL');
+  const googleClientId = readEnv('GOOGLE_CLIENT_ID');
+  const googleClientSecret = readEnv('GOOGLE_CLIENT_SECRET');
+  const googleCallbackUrl = readEnv('GOOGLE_CALLBACK_URL');
+  const googleOAuthConfigured = Boolean(googleClientId || googleClientSecret || googleCallbackUrl);
+  const missingGoogleOAuth = googleOAuthConfigured && (!googleClientId || !googleClientSecret || !googleCallbackUrl);
+  const invalidClientUrl = isLocalhostUrl(clientUrl);
+  const invalidGoogleCallback = googleCallbackUrl ? isLocalhostUrl(googleCallbackUrl) : false;
   const missingNewsKey = !readEnv('NEWS_API_KEY') && !readEnv('GNEWS_API_KEY');
   const missingLiveKeys =
     process.env.USE_MOCK_DATA === 'false'
       ? [...liveProviderKeys.filter((key) => !readEnv(key)), ...(missingNewsKey ? ['NEWS_API_KEY or GNEWS_API_KEY'] : [])]
       : [];
 
-  if (missing.length > 0 || missingMongoUri || missingLiveKeys.length > 0) {
-    const allMissing = [...missing, ...(missingMongoUri ? ['MONGO_URI or MONGODB_URI'] : []), ...missingLiveKeys];
+  if (missing.length > 0 || missingMongoUri || missingGoogleOAuth || invalidClientUrl || invalidGoogleCallback || missingLiveKeys.length > 0) {
+    const allMissing = [
+      ...missing,
+      ...(missingMongoUri ? ['MONGO_URI or MONGODB_URI'] : []),
+      ...(missingGoogleOAuth ? ['GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL'] : []),
+      ...(invalidClientUrl ? ['CLIENT_URL must point to the deployed frontend'] : []),
+      ...(invalidGoogleCallback ? ['GOOGLE_CALLBACK_URL must not point to localhost in production'] : []),
+      ...missingLiveKeys,
+    ];
     throw new Error(`Missing required production environment variables: ${allMissing.join(', ')}`);
   }
 };
@@ -43,14 +60,15 @@ const env = {
   appName: process.env.APP_NAME || appName,
   port: Number(process.env.PORT) || 4000,
   mongoUri: readEnv('MONGODB_URI') || readEnv('MONGO_URI') || localMongoUri,
-  jwtSecret: readEnv('JWT_SECRET', 'local-stockiq-development-secret'),
+  jwtSecret: readEnv('JWT_SECRET', isProduction ? '' : 'local-stockiq-development-secret'),
   jwtExpiresIn: readEnv('JWT_EXPIRES_IN', '7d'),
   jwtCookieExpiresIn: Number(process.env.JWT_COOKIE_EXPIRES_IN) || 7,
-  clientUrl: readEnv('CLIENT_URL') || readEnv('VITE_API_URL') || 'http://localhost:5173',
-  sessionSecret: readEnv('SESSION_SECRET', 'stockiq_session_secret'),
+  clientUrl: readEnv('CLIENT_URL') || (isProduction ? '' : 'http://localhost:5173'),
+  sessionSecret: readEnv('SESSION_SECRET', isProduction ? '' : 'stockiq_session_secret'),
   googleClientId: readEnv('GOOGLE_CLIENT_ID'),
   googleClientSecret: readEnv('GOOGLE_CLIENT_SECRET'),
-  googleCallbackUrl: readEnv('GOOGLE_CALLBACK_URL', 'http://localhost:4000/api/auth/google/callback'),
+  googleCallbackUrl:
+    readEnv('GOOGLE_CALLBACK_URL') || (isProduction ? '' : 'http://localhost:4000/api/auth/google/callback'),
   enableApiCache: readBoolean('ENABLE_API_CACHE', true),
   cacheTtlMarket: readPositiveInteger('CACHE_TTL_MARKET', 300),
   cacheTtlNews: readPositiveInteger('CACHE_TTL_NEWS', 900),

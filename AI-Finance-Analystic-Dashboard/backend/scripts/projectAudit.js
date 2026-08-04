@@ -115,8 +115,9 @@ const scanProject = () => {
   record('Legacy /register redirects', router.includes('to="/signup"'));
 
   const apiClient = readFile('frontend/src/api/axios.ts');
+  const baseUrlFile = readFile('frontend/src/api/baseUrl.ts');
   record('Axios API client exists', fileExists('frontend/src/api/axios.ts'));
-  record('Axios base URL targets /api', apiClient.includes('endsWith(\'/api\')'));
+  record('Axios base URL targets /api', baseUrlFile.includes('endsWith(\'/api\')'));
   record('Axios auth interceptor', apiClient.includes('Authorization'));
   record('Axios 401 interceptor', apiClient.includes('stockiq:auth-expired'));
 
@@ -127,7 +128,7 @@ const scanProject = () => {
 
   const appFile = readFile('backend/app.js');
   record('CORS credentials enabled', appFile.includes('credentials: true'));
-  record('Frontend origin allowed', appFile.includes('http://localhost:5173'));
+  record('Frontend origin allowed', appFile.includes('isAllowedOrigin') && appFile.includes('env.clientUrl'));
   record('Auth routes mounted', appFile.includes("app.use('/api/auth'"));
   record('Market routes mounted', appFile.includes("app.use('/api/market'"));
   record('AI routes mounted', appFile.includes("app.use('/api/ai'"));
@@ -136,7 +137,7 @@ const scanProject = () => {
   record('Watchlist routes mounted', appFile.includes("app.use('/api/watchlist'"));
 
   record('Backend PORT is 4000', Number(env.port) === 4000);
-  record('Frontend VITE_API_URL configured', readFile('frontend/.env').includes('VITE_API_URL=http://localhost:4000'));
+  record('Frontend VITE_API_URL configured', readFile('frontend/.env.example').includes('VITE_API_URL='));
   record('JWT secret configured', Boolean(env.jwtSecret));
   record('Mock data enabled', env.useMockData === true);
   record('Tailwind config exists', fileExists('frontend/tailwind.config.cjs'));

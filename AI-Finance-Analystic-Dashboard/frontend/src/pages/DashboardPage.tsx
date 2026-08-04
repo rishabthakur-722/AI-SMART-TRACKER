@@ -12,6 +12,7 @@ import Skeleton from '../components/ui/Skeleton';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { dashboardService } from '../services/dashboardService';
 import type { MarketAsset, MarketTrendOverview, PortfolioAnalytics, Transaction, Watchlist } from '../types/domain';
+import type { DashboardSummaryPayload } from '../services/dashboardService';
 import { getTransactionId, getTransactionSymbol } from '../utils/analytics';
 import { formatCurrency, formatPercent, getAssetCurrency } from '../utils/formatters';
 
@@ -31,7 +32,7 @@ const mockEconomicEvents = [
 ];
 
 export default function DashboardPage() {
-  const [summary, setSummary] = useState<any>(null);
+  const [summary, setSummary] = useState<DashboardSummaryPayload | null>(null);
   const [liveWarning, setLiveWarning] = useState(false);
   const [loading, setLoading] = useState(true);
   const [refreshIndex, setRefreshIndex] = useState(0);
@@ -69,7 +70,7 @@ export default function DashboardPage() {
   const trending = summary?.trendingStocks || [];
   const gainers = summary?.topGainers || [];
   const losers = summary?.topLosers || [];
-  const marketTrends = summary?.marketTrends;
+  const marketTrends = summary?.marketTrends ?? null;
   const marketUniverse = summary?.marketUniverse || [];
   const transactions = summary?.transactions || [];
   const watchlists = summary?.watchlist || [];

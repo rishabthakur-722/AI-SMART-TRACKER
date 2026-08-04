@@ -1,7 +1,6 @@
 import api from '../api/axios';
 import { endpoints } from '../api/endpoints';
-import type { AISummaryPayload } from './aiService';
-import type { ApiResponse, MarketAsset, MarketIndex, MarketTrendOverview, NewsArticle, PortfolioAnalytics, Transaction, Watchlist } from '../types/domain';
+import type { AISummaryPayload, ApiResponse, MarketAsset, MarketIndex, MarketTrendOverview, NewsArticle, PortfolioAnalytics, Transaction, Watchlist } from '../types/domain';
 import { withCachedFallback } from '../utils/serviceCache';
 
 export type DashboardWarning = {

@@ -27,10 +27,17 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (response) => response,
   (error: AxiosError<{ message?: string }>) => {
+    if (error.code === 'ERR_CANCELED') {
+      return Promise.reject(error);
+    }
+
     const isTimeout = error.code === 'ECONNABORTED' || error.message.toLowerCase().includes('timeout');
+    const isNetworkError = !error.response || error.code === 'ERR_NETWORK' || error.code === 'ERR_FAILED';
     const message = isTimeout
       ? 'The API took too long to respond. Please try again.'
-      : error.response?.data?.message || error.message || 'Something went wrong';
+      : isNetworkError
+        ? 'Unable to reach the StockIQ API. Check the deployed backend URL, CORS settings, and server status.'
+        : error.response?.data?.message || error.message || 'Something went wrong';
 
     if (error.response?.status === 401) {
       clearStoredToken();

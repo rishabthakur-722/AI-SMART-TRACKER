@@ -32,15 +32,32 @@ let _io = null;
 function init(httpServer) {
   if (_io) return _io;
 
-  const allowedOrigins = [
-    env.clientUrl,
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-  ].filter(Boolean);
+  const allowedOrigins = new Set([env.clientUrl].filter(Boolean));
+  const isAllowedDevOrigin = (origin = '') => {
+    if (env.nodeEnv === 'production') {
+      return false;
+    }
+
+    return /^https?:\/\/(localhost|127\.0\.0\.1|0\.0\.0\.0|10\.\d+\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+):5173$/.test(origin);
+  };
+
+  const isAllowedOrigin = (origin = '') => {
+    if (!origin) {
+      return true;
+    }
+
+    return allowedOrigins.has(origin) || isAllowedDevOrigin(origin);
+  };
 
   _io = new Server(httpServer, {
     cors: {
-      origin: allowedOrigins,
+      origin(origin, callback) {
+        if (isAllowedOrigin(origin)) {
+          return callback(null, true);
+        }
+
+        return callback(new Error(`Socket.IO blocked request from origin: ${origin}`));
+      },
       credentials: true,
     },
     transports: ['websocket', 'polling'],
@@ -49,7 +66,9 @@ function init(httpServer) {
   });
 
   _io.on('connection', (socket) => {
-    console.log(`[Socket] Client connected: ${socket.id}`);
+    if (env.nodeEnv !== 'production') {
+      console.log(`[Socket] Client connected: ${socket.id}`);
+    }
 
     // ── Room subscriptions ──────────────────────────────────────────────────
 
@@ -86,7 +105,9 @@ function init(httpServer) {
     });
 
     socket.on('disconnect', (reason) => {
-      console.log(`[Socket] Client disconnected: ${socket.id} — ${reason}`);
+      if (env.nodeEnv !== 'production') {
+        console.log(`[Socket] Client disconnected: ${socket.id} — ${reason}`);
+      }
     });
 
     socket.on('error', (err) => {
@@ -94,7 +115,9 @@ function init(httpServer) {
     });
   });
 
-  console.log('[Socket] Socket.IO initialised.');
+  if (env.nodeEnv !== 'production') {
+    console.log('[Socket] Socket.IO initialised.');
+  }
   return _io;
 }
 

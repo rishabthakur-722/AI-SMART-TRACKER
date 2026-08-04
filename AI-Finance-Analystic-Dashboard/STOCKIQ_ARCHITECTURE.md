@@ -264,7 +264,7 @@ Frontend deployment:
 - Target: Vercel
 - Build command: `npm run build`
 - Output directory: `dist`
-- Required environment variable: `VITE_API_BASE_URL`
+- Required environment variable: `VITE_API_URL`
 
 Backend deployment:
 
@@ -305,7 +305,7 @@ Frontend `.env`:
 
 ```text
 VITE_APP_NAME=StockIQ
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_URL=https://your-render-service.onrender.com
 VITE_USE_MOCK_DATA=true
 ```
 

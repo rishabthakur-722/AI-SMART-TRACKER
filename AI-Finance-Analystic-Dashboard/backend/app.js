@@ -27,13 +27,21 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
 
-const allowedOrigins = [env.clientUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'].filter(Boolean);
+const allowedOrigins = new Set([env.clientUrl].filter(Boolean));
 const isAllowedDevOrigin = (origin = '') => {
   if (env.nodeEnv === 'production') {
     return false;
   }
 
   return /^https?:\/\/(localhost|127\.0\.0\.1|0\.0\.0\.0|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+):5173$/.test(origin);
+};
+
+const isAllowedOrigin = (origin = '') => {
+  if (!origin) {
+    return true;
+  }
+
+  return allowedOrigins.has(origin) || isAllowedDevOrigin(origin);
 };
 
 app.disable('x-powered-by');
@@ -48,7 +56,7 @@ app.use(
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin) || isAllowedDevOrigin(origin)) {
+      if (isAllowedOrigin(origin)) {
         return callback(null, true);
       }
 

@@ -15,6 +15,6 @@ npm run preview
 
 ```text
 VITE_APP_NAME=StockIQ
-VITE_API_URL=http://localhost:4000
+VITE_API_URL=https://your-render-service.onrender.com
 VITE_USE_MOCK_DATA=true
 ```

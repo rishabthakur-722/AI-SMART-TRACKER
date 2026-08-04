@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const { env } = require('./env');
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const connectionOptions = {
+  autoIndex: env.nodeEnv !== 'production',
+  serverSelectionTimeoutMS: 5000,
+  connectTimeoutMS: 10000,
+  maxPoolSize: env.nodeEnv === 'production' ? 15 : 5,
+  minPoolSize: 0,
+  retryWrites: true,
+  retryReads: true,
+};
+
 const connectDB = async () => {
   if (!env.mongoUri) {
     if (env.nodeEnv === 'production') {
@@ -13,22 +25,28 @@ const connectDB = async () => {
 
   mongoose.set('strictQuery', true);
 
-  try {
-    const connection = await mongoose.connect(env.mongoUri, {
-      autoIndex: env.nodeEnv !== 'production',
-      serverSelectionTimeoutMS: 5000,
-    });
+  const attempts = env.nodeEnv === 'production' ? 3 : 1;
 
-    console.log(`MongoDB connected: ${connection.connection.host}`);
-    return connection;
-  } catch (error) {
-    if (env.nodeEnv === 'production') {
-      throw error;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const connection = await mongoose.connect(env.mongoUri, connectionOptions);
+
+      console.log(`MongoDB connected: ${connection.connection.host}`);
+      return connection;
+    } catch (error) {
+      if (attempt >= attempts) {
+        if (env.nodeEnv === 'production') {
+          throw error;
+        }
+
+        console.warn(`MongoDB connection unavailable: ${error.message}`);
+        console.warn(`${env.appName} API started without database access. Start local MongoDB or update MONGODB_URI for auth, portfolio, trading, watchlists, and settings.`);
+        return null;
+      }
+
+      console.warn(`MongoDB connection attempt ${attempt} failed: ${error.message}`);
+      await delay(attempt * 2000);
     }
-
-    console.warn(`MongoDB connection unavailable: ${error.message}`);
-    console.warn(`${env.appName} API started without database access. Start local MongoDB or update MONGODB_URI for auth, portfolio, trading, watchlists, and settings.`);
-    return null;
   }
 };
 

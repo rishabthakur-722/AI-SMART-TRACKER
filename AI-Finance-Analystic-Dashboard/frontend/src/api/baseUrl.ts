@@ -1,11 +1,16 @@
 const trimTrailingSlashes = (value: string) => value.replace(/\/+$/, '');
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim();
 
 export const getApiBaseUrl = () => {
   if (import.meta.env.DEV) {
     return '/api';
   }
 
-  const rawApiUrl = trimTrailingSlashes(String(import.meta.env.VITE_API_URL || 'http://localhost:4000'));
+  if (!configuredApiUrl) {
+    throw new Error('VITE_API_URL is required in production');
+  }
+
+  const rawApiUrl = trimTrailingSlashes(configuredApiUrl);
   return rawApiUrl.endsWith('/api') ? rawApiUrl : `${rawApiUrl}/api`;
 };
 

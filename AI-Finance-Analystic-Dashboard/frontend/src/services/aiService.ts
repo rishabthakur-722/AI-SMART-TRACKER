@@ -1,46 +1,17 @@
 import api from '../api/axios';
 import { endpoints } from '../api/endpoints';
 import { getCachedValue, setCachedValue } from '../utils/serviceCache';
-import type { AIInsightPayload, AITransactionInsightPayload, AISummaryPayload, ApiResponse, MarketTrendOverview, SentimentAnalysis } from '../types/domain';
-
-export type AIRiskPayload = {
-  riskAlerts: AIInsightPayload['riskAlerts'];
-  highRiskAssets: MarketTrendOverview['bearishAssets'];
-  volatilityWarnings: Array<{ symbol: string; changePercent: number; reason: string }>;
-  exposureWarning: AIInsightPayload['portfolioSuggestions'][number] | null;
-};
-
-export type AISuggestionsPayload = {
-  smartRecommendations: AIInsightPayload['recommendations'];
-  investmentOpportunities: AIInsightPayload['marketOpportunities'];
-  portfolioSuggestions: AIInsightPayload['portfolioSuggestions'];
-  diversificationSuggestions: string[];
-};
-
-export type AINewsSentimentPayload = {
-  items: SentimentAnalysis[];
-  distribution: {
-    positive: number;
-    negative: number;
-    neutral: number;
-  };
-  summary: {
-    total: number;
-    positive: number;
-    negative: number;
-    neutral: number;
-  };
-};
-
-export type AISummaryPayload = {
-  insights: AIInsightPayload;
-  risk: AIRiskPayload;
-  suggestions: AISuggestionsPayload;
-  newsSentiment: AINewsSentimentPayload;
-  portfolioSummary: AIInsightPayload['portfolioSummary'] | null;
-  marketTrends?: MarketTrendOverview;
-  isFallback?: boolean;
-};
+import type {
+  AIInsightPayload,
+  AINewsSentimentPayload,
+  AIRiskPayload,
+  AITransactionInsightPayload,
+  AISummaryPayload,
+  AISuggestionsPayload,
+  ApiResponse,
+  MarketTrendOverview,
+  SentimentAnalysis,
+} from '../types/domain';
 
 
 export const aiService = {
