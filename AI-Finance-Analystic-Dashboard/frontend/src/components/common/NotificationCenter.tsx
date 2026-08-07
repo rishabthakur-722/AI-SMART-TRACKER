@@ -27,7 +27,7 @@ const mockNotifications = [
     id: '3',
     type: 'market',
     title: 'Market Update',
-    message: 'NIFTY 50 up +1.2% - Bullish momentum continues.',
+    message: 'NIFTY 50 up +1.2% — Bullish momentum continues.',
     time: '1h ago',
     read: true,
     href: '/markets/NIFTY',

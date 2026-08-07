@@ -27,6 +27,11 @@ export default function Login() {
     []
   );
 
+  const fillDemoCredentials = () => {
+    setEmail('demo@stockiq.app');
+    setPassword('Demo@1234');
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -86,6 +91,28 @@ export default function Login() {
         <div className="mb-8">
           <h1 className="text-2xl font-bold tracking-normal sm:text-4xl">Welcome back</h1>
           <p className="mt-3 text-base text-white/72">Login to continue your investment journey.</p>
+        </div>
+
+        {/* Demo credentials banner */}
+        <div className="mb-6 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] p-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-300">Demo Access</p>
+          <div className="mt-2 flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="truncate text-sm text-white/80">
+                <span className="font-medium text-white">Email:</span> demo@stockiq.app
+              </p>
+              <p className="mt-0.5 text-sm text-white/80">
+                <span className="font-medium text-white">Password:</span> Demo@1234
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={fillDemoCredentials}
+              className="shrink-0 rounded-lg bg-emerald-400/20 px-3 py-1.5 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-400/30"
+            >
+              Use Demo
+            </button>
+          </div>
         </div>
 
         <div className="space-y-7">

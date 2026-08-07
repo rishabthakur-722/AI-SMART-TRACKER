@@ -1,5 +1,38 @@
 [
   {
+    "symbol": "NIFTY",
+    "name": "Nifty 50 Index",
+    "exchange": "NSE",
+    "country": "IN",
+    "currency": "INR",
+    "assetType": "stock",
+    "sector": "Index",
+    "industry": "Broad Market Index",
+    "price": 24715.4,
+    "previousClose": 24358.2,
+    "change": 357.2,
+    "changePercent": 1.47,
+    "marketCap": 0,
+    "volume": 0,
+    "averageVolume": 0,
+    "peRatio": 22.5,
+    "eps": 1098.46,
+    "dividendYield": 1.2,
+    "high52": 26277.35,
+    "low52": 21964.6,
+    "beta": 1,
+    "analystRating": "Buy",
+    "sparkline": [
+      24000,
+      24100,
+      24250,
+      24358,
+      24450,
+      24580,
+      24715
+    ]
+  },
+  {
     "symbol": "RELIANCE",
     "name": "Reliance Industries Ltd.",
     "exchange": "NSE",

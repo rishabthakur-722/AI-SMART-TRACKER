@@ -19,6 +19,7 @@ const getMockWatchlists = () =>
 
 const writeMockWatchlists = (watchlists) => {
   const payload = watchlists.map((watchlist) => ({
+    _id: watchlist._id || watchlist.id,
     id: watchlist.id || watchlist._id,
     name: watchlist.name,
     items: Array.isArray(watchlist.items) ? watchlist.items : [],

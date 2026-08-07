@@ -96,8 +96,44 @@ const findUserById = (userId) => {
   return user ? publicUser(user) : null;
 };
 
+/**
+ * Update a dev user's profile or preferences fields.
+ * @param {string} userId
+ * @param {Record<string, any>} updates  Flat or dot-notation keys (e.g. 'preferences.currency').
+ * @returns {object|null} Updated public user or null if not found.
+ */
+const updateUser = (userId, updates = {}) => {
+  const users = readUsers();
+  const index = users.findIndex((item) => item._id === userId);
+
+  if (index === -1) {
+    return null;
+  }
+
+  const user = { ...users[index], updatedAt: new Date().toISOString() };
+
+  for (const [key, value] of Object.entries(updates)) {
+    if (key.includes('.')) {
+      // Support dot-notation like 'preferences.currency'
+      const [parent, child] = key.split('.');
+      if (!user[parent] || typeof user[parent] !== 'object') {
+        user[parent] = {};
+      }
+      user[parent] = { ...user[parent], [child]: value };
+    } else {
+      user[key] = value;
+    }
+  }
+
+  users[index] = user;
+  writeUsers(users);
+  return publicUser(user);
+};
+
 module.exports = {
   createUser,
   verifyUser,
   findUserById,
+  updateUser,
 };
+

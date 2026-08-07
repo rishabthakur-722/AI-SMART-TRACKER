@@ -116,13 +116,13 @@ export default function Navbar() {
           </div>
 
           <Link
-            to="/markets/NIFTY"
+            to="/markets"
             className="hidden h-9 items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 transition hover:border-white/15 hover:bg-white/[0.08] sm:flex"
-            aria-label="Open NIFTY market details"
-            title="Open NIFTY market details"
+            aria-label="Open markets page"
+            title="Open markets page"
           >
             <TrendingUp size={14} className="text-emerald-400" />
-            <span className="text-xs font-semibold text-white/70">NIFTY</span>
+            <span className="text-xs font-semibold text-white/70">Markets</span>
           </Link>
 
           <Link
