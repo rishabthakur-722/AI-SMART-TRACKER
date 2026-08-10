@@ -21,7 +21,7 @@ MONGODB_URI=mongodb://127.0.0.1:27017/stockiq
 JWT_SECRET=replace-with-a-strong-secret
 SESSION_SECRET=replace-with-a-long-random-secret
 CLIENT_URL=http://localhost:5173
-GOOGLE_CALLBACK_URL=https://your-render-service.onrender.com/api/auth/google/callback
+GOOGLE_CALLBACK_URL=/api/auth/google/callback
 USE_MOCK_DATA=true
 FINNHUB_API_KEY=
 FMP_API_KEY=
@@ -67,6 +67,8 @@ Live provider strategy:
 - CoinGecko: crypto market data
 
 When `USE_MOCK_DATA=true`, the API reads from `backend/data`. When `USE_MOCK_DATA=false`, the live provider keys above are used.
+
+Google OAuth works with a relative callback path, so the same backend configuration runs locally and in production as long as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are set.
 
 It powers:
 

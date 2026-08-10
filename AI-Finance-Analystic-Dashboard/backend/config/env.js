@@ -2,6 +2,7 @@ const appName = 'StockIQ';
 const localMongoUri = 'mongodb://127.0.0.1:27017/stockiq';
 const requiredInProduction = ['JWT_SECRET', 'CLIENT_URL', 'SESSION_SECRET'];
 const liveProviderKeys = ['FINNHUB_API_KEY', 'FMP_API_KEY', 'GROQ_API_KEY', 'GEMINI_API_KEY', 'COINGECKO_API_KEY'];
+const defaultGoogleCallbackPath = '/api/auth/google/callback';
 const isProduction = process.env.NODE_ENV === 'production';
 const isLocalhostUrl = (value) => /^https?:\/\/(localhost|127\.0\.0\.1)(?::\d+)?(?:\/|$)/i.test(value.trim());
 const isPlaceholderMongoUri = (value) => /<[^>]+>/.test(value) || value.includes('mongodb+srv://') && value.includes('<');
@@ -31,6 +32,16 @@ const readPositiveInteger = (key, fallback) => {
   return Number.isFinite(value) && value > 0 ? Math.floor(value) : fallback;
 };
 
+const normalizeGoogleCallbackUrl = (key) => {
+  const trimmed = readEnv(key);
+
+  if (!trimmed || isLocalhostUrl(trimmed)) {
+    return defaultGoogleCallbackPath;
+  }
+
+  return trimmed;
+};
+
 const validateEnv = () => {
   if (!isProduction) {
     return;
@@ -41,24 +52,22 @@ const validateEnv = () => {
   const clientUrl = readEnv('CLIENT_URL');
   const googleClientId = readEnv('GOOGLE_CLIENT_ID');
   const googleClientSecret = readEnv('GOOGLE_CLIENT_SECRET');
-  const googleCallbackUrl = readEnv('GOOGLE_CALLBACK_URL');
-  const googleOAuthConfigured = Boolean(googleClientId || googleClientSecret || googleCallbackUrl);
-  const missingGoogleOAuth = googleOAuthConfigured && (!googleClientId || !googleClientSecret || !googleCallbackUrl);
+  const googleCallbackUrl = normalizeGoogleCallbackUrl('GOOGLE_CALLBACK_URL');
+  const googleOAuthConfigured = Boolean(googleClientId || googleClientSecret || readEnv('GOOGLE_CALLBACK_URL'));
+  const missingGoogleOAuth = googleOAuthConfigured && (!googleClientId || !googleClientSecret);
   const invalidClientUrl = isLocalhostUrl(clientUrl);
-  const invalidGoogleCallback = googleCallbackUrl ? isLocalhostUrl(googleCallbackUrl) : false;
   const missingNewsKey = !readEnv('NEWS_API_KEY') && !readEnv('GNEWS_API_KEY');
   const missingLiveKeys =
     process.env.USE_MOCK_DATA === 'false'
       ? [...liveProviderKeys.filter((key) => !readEnv(key)), ...(missingNewsKey ? ['NEWS_API_KEY or GNEWS_API_KEY'] : [])]
       : [];
 
-  if (missing.length > 0 || missingMongoUri || missingGoogleOAuth || invalidClientUrl || invalidGoogleCallback || missingLiveKeys.length > 0) {
+  if (missing.length > 0 || missingMongoUri || missingGoogleOAuth || invalidClientUrl || missingLiveKeys.length > 0) {
     const allMissing = [
       ...missing,
       ...(missingMongoUri ? ['MONGO_URI or MONGODB_URI'] : []),
-      ...(missingGoogleOAuth ? ['GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL'] : []),
+      ...(missingGoogleOAuth ? ['GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET'] : []),
       ...(invalidClientUrl ? ['CLIENT_URL must point to the deployed frontend'] : []),
-      ...(invalidGoogleCallback ? ['GOOGLE_CALLBACK_URL must not point to localhost in production'] : []),
       ...missingLiveKeys,
     ];
     throw new Error(`Missing required production environment variables: ${allMissing.join(', ')}`);
@@ -77,8 +86,7 @@ const env = {
   sessionSecret: readEnv('SESSION_SECRET', isProduction ? '' : 'stockiq_session_secret'),
   googleClientId: readEnv('GOOGLE_CLIENT_ID'),
   googleClientSecret: readEnv('GOOGLE_CLIENT_SECRET'),
-  googleCallbackUrl:
-    readEnv('GOOGLE_CALLBACK_URL') || (isProduction ? '' : 'http://localhost:4000/api/auth/google/callback'),
+  googleCallbackUrl: normalizeGoogleCallbackUrl('GOOGLE_CALLBACK_URL'),
   enableApiCache: readBoolean('ENABLE_API_CACHE', true),
   cacheTtlMarket: readPositiveInteger('CACHE_TTL_MARKET', 300),
   cacheTtlNews: readPositiveInteger('CACHE_TTL_NEWS', 900),
