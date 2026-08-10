@@ -68,6 +68,8 @@ Live provider strategy:
 
 When `USE_MOCK_DATA=true`, the API reads from `backend/data`. When `USE_MOCK_DATA=false`, the live provider keys above are used.
 
+In production, the backend defaults to live market data unless `USE_MOCK_DATA=true` is set explicitly.
+
 Google OAuth works with a relative callback path, so the same backend configuration runs locally and in production as long as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are set.
 
 It powers:

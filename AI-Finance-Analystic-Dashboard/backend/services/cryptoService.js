@@ -61,7 +61,7 @@ const mapCoinGeckoMarket = (asset) => ({
 });
 
 const getMockCryptoMarkets = (filters = {}) => {
-  const limit = Number(filters.limit) || undefined;
+  const limit = Number(filters.limit) || 300;
   const items = filterByQuery(readJson('crypto.json').map(mapMockCrypto), filters);
   return limit ? items.slice(0, limit) : items;
 };
@@ -70,7 +70,7 @@ const getLiveCryptoMarkets = async (filters = {}) => {
   const url = buildUrl('https://api.coingecko.com/api/v3/coins/markets', {
     vs_currency: String(filters.currency || 'usd'),
     order: filters.order || 'market_cap_desc',
-    per_page: Number(filters.limit) || 50,
+    per_page: Number(filters.limit) || 300,
     page: Number(filters.page) || 1,
     sparkline: true,
     price_change_percentage: '24h',

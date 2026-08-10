@@ -8,6 +8,7 @@ import SocialButton from '../components/auth/SocialButton';
 import { getAuthProviderUrl } from '../api/baseUrl';
 import { useAuth } from '../context/AuthContext';
 import authBg from '../assets/images/auth/auth-bg.png';
+import { isDisposableEmail, isValidEmailAddress } from '../utils/emailValidation';
 
 const getAuthUrl = (provider: 'google') => {
   return getAuthProviderUrl(provider);
@@ -34,6 +35,16 @@ export default function Signup() {
 
     if (!name.trim() || !email.trim() || !password) {
       toast.error('Complete all required fields.');
+      return;
+    }
+
+    if (!isValidEmailAddress(email)) {
+      toast.error('Enter a valid email address.');
+      return;
+    }
+
+    if (isDisposableEmail(email)) {
+      toast.error('Temporary email addresses are not allowed.');
       return;
     }
 
@@ -120,7 +131,7 @@ export default function Signup() {
             autoComplete="email"
             required
           />
-          <AuthInput
+            <AuthInput
             label="Password"
             icon={Mail}
             type="password"
@@ -166,7 +177,7 @@ export default function Signup() {
         <button
           type="submit"
           disabled={submitting}
-          className="mt-7 h-14 w-full rounded-lg bg-gradient-to-r from-[#66f283] to-[#25cde8] text-xl font-bold text-black shadow-[0_16px_35px_rgba(31,211,177,0.2)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-65"
+            className="mt-7 h-14 w-full rounded-lg bg-linear-to-r from-[#66f283] to-[#25cde8] text-xl font-bold text-black shadow-[0_16px_35px_rgba(31,211,177,0.2)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-65"
         >
           {submitting ? 'Creating account...' : 'Sign Up'}
         </button>

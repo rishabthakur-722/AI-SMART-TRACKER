@@ -52,13 +52,13 @@ const validateEnv = () => {
   const clientUrl = readEnv('CLIENT_URL');
   const googleClientId = readEnv('GOOGLE_CLIENT_ID');
   const googleClientSecret = readEnv('GOOGLE_CLIENT_SECRET');
-  const googleCallbackUrl = normalizeGoogleCallbackUrl('GOOGLE_CALLBACK_URL');
   const googleOAuthConfigured = Boolean(googleClientId || googleClientSecret || readEnv('GOOGLE_CALLBACK_URL'));
   const missingGoogleOAuth = googleOAuthConfigured && (!googleClientId || !googleClientSecret);
   const invalidClientUrl = isLocalhostUrl(clientUrl);
   const missingNewsKey = !readEnv('NEWS_API_KEY') && !readEnv('GNEWS_API_KEY');
+  const useMockData = readBoolean('USE_MOCK_DATA', !isProduction);
   const missingLiveKeys =
-    process.env.USE_MOCK_DATA === 'false'
+    !useMockData
       ? [...liveProviderKeys.filter((key) => !readEnv(key)), ...(missingNewsKey ? ['NEWS_API_KEY or GNEWS_API_KEY'] : [])]
       : [];
 
@@ -91,7 +91,7 @@ const env = {
   cacheTtlMarket: readPositiveInteger('CACHE_TTL_MARKET', 300),
   cacheTtlNews: readPositiveInteger('CACHE_TTL_NEWS', 900),
   cacheTtlAi: readPositiveInteger('CACHE_TTL_AI', 1800),
-  useMockData: readBoolean('USE_MOCK_DATA', true),
+  useMockData: readBoolean('USE_MOCK_DATA', !isProduction),
   finnhubApiKey: readEnv('FINNHUB_API_KEY'),
   fmpApiKey: readEnv('FMP_API_KEY'),
   newsApiKey: readEnv('NEWS_API_KEY') || readEnv('GNEWS_API_KEY'),

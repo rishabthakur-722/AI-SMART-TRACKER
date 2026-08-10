@@ -1,12 +1,26 @@
 const { body } = require('express-validator');
 const validateRequest = require('./validateRequest');
+const { isDisposableEmail } = require('../utils/emailValidation');
+
+const disposableEmailValidator = (value) => {
+  if (isDisposableEmail(value)) {
+    throw new Error('Temporary email addresses are not allowed');
+  }
+
+  return true;
+};
 
 const registerValidator = [
   body('name')
     .trim()
     .isLength({ min: 2, max: 80 })
     .withMessage('Name must be between 2 and 80 characters'),
-  body('email').trim().isEmail().withMessage('A valid email is required').normalizeEmail(),
+  body('email')
+    .trim()
+    .isEmail()
+    .withMessage('A valid email is required')
+    .normalizeEmail()
+    .custom(disposableEmailValidator),
   body('password')
     .isLength({ min: 8 })
     .withMessage('Password must be at least 8 characters')
@@ -20,7 +34,12 @@ const registerValidator = [
 ];
 
 const loginValidator = [
-  body('email').trim().isEmail().withMessage('A valid email is required').normalizeEmail(),
+  body('email')
+    .trim()
+    .isEmail()
+    .withMessage('A valid email is required')
+    .normalizeEmail()
+    .custom(disposableEmailValidator),
   body('password').notEmpty().withMessage('Password is required'),
   validateRequest,
 ];

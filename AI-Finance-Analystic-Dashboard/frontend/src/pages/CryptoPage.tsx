@@ -19,11 +19,11 @@ const mockWhaleActivity = [
 ];
 
 export default function CryptoPage() {
-  const [visibleCount, setVisibleCount] = useState(24);
+  const [visibleCount, setVisibleCount] = useState(60);
   const { data, loading } = useAsyncData(
     async () => {
       const [assets, trends, sentiment] = await Promise.all([
-        marketService.getCryptoMarkets(),
+        marketService.getCryptoMarkets({ limit: '300' }),
         marketService.getMarketTrends(),
         marketService.getSentimentAnalysis(),
       ]);
@@ -76,7 +76,7 @@ export default function CryptoPage() {
       {/* Main Indices / Dominance widgets */}
       <div className="grid gap-4 md:grid-cols-3">
         {/* Bitcoin Dominance */}
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>Bitcoin Dominance</CardTitle>
@@ -94,7 +94,7 @@ export default function CryptoPage() {
         </Card>
 
         {/* Altcoin Season Index */}
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>Altcoin Season Index</CardTitle>
@@ -112,7 +112,7 @@ export default function CryptoPage() {
         </Card>
 
         {/* Fear & Greed Index */}
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>Crypto Fear & Greed</CardTitle>
@@ -132,21 +132,21 @@ export default function CryptoPage() {
 
       {/* Primary Metrics */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card className="border-white/[0.08] bg-[#111115]/50">
+        <Card className="border-white/8 bg-stockiq-panel/50">
           <CardContent>
             <Bitcoin className="text-indigo-400" size={22} />
             <p className="mt-4 text-xs text-white/40 font-semibold uppercase tracking-wider">Crypto Market Cap</p>
             <p className="mt-1 text-2xl font-bold text-white font-display">{formatCurrency(totalMarketCap, 'USD')}</p>
           </CardContent>
         </Card>
-        <Card className="border-white/[0.08] bg-[#111115]/50">
+        <Card className="border-white/8 bg-stockiq-panel/50">
           <CardContent>
             <Coins className="text-indigo-400" size={22} />
             <p className="mt-4 text-xs text-white/40 font-semibold uppercase tracking-wider">24h Cumulative Vol</p>
             <p className="mt-1 text-2xl font-bold text-white font-display">{formatCurrency(totalVolume, 'USD')}</p>
           </CardContent>
         </Card>
-        <Card className="border-white/[0.08] bg-[#111115]/50">
+        <Card className="border-white/8 bg-stockiq-panel/50">
           <CardContent>
             <RadioTower className="text-emerald-400" size={22} />
             <p className="mt-4 text-xs text-white/40 font-semibold uppercase tracking-wider">Traction Velocity</p>
@@ -154,7 +154,7 @@ export default function CryptoPage() {
             <ScoreMeter value={averageTrendScore} className="mt-4" />
           </CardContent>
         </Card>
-        <Card className="border-white/[0.08] bg-[#111115]/50">
+        <Card className="border-white/8 bg-stockiq-panel/50">
           <CardContent>
             <ShieldAlert className="text-rose-400" size={22} />
             <p className="mt-4 text-xs text-white/40 font-semibold uppercase tracking-wider">Volatility Watch</p>
@@ -176,10 +176,10 @@ export default function CryptoPage() {
         {data.assets.length > visibleCount && (
           <div className="flex justify-center pt-2">
             <button
-              onClick={() => setVisibleCount((prev) => prev + 24)}
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.08] px-6 text-xs font-bold uppercase tracking-wider text-white transition duration-150"
+              onClick={() => setVisibleCount((prev) => prev + 60)}
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl border border-white/8 bg-white/4 px-6 text-xs font-bold uppercase tracking-wider text-white transition duration-150 hover:bg-white/8"
             >
-              Load More Assets (+24)
+              Load More Assets (+60)
             </button>
           </div>
         )}
@@ -187,7 +187,7 @@ export default function CryptoPage() {
 
       {/* Charts and Sentiment */}
       <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader>
             <CardTitle>Market Capitalization Spread</CardTitle>
           </CardHeader>
@@ -209,14 +209,14 @@ export default function CryptoPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader>
             <CardTitle>AI Social Sentiment</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {data.sentiment.map((item) => (
-                <div key={item.symbol} className="rounded-xl border border-white/[0.05] bg-white/[0.01] p-4">
+                <div key={item.symbol} className="rounded-xl border border-white/5 bg-white/1 p-4">
                   <div className="flex items-center justify-between gap-3">
                     <p className="font-bold text-sm text-white">{item.symbol}</p>
                     <Badge tone={item.sentiment === 'Positive' ? 'success' : item.sentiment === 'Negative' ? 'danger' : 'neutral'}>
@@ -234,7 +234,7 @@ export default function CryptoPage() {
       {/* Whale Activity Feed & On-chain Analysis */}
       <div className="grid gap-4 xl:grid-cols-2">
         {/* Whale Activity */}
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>Whale Activity Monitor</CardTitle>
@@ -244,7 +244,7 @@ export default function CryptoPage() {
           </CardHeader>
           <CardContent className="space-y-3">
             {mockWhaleActivity.map((wl, idx) => (
-              <div key={idx} className="flex justify-between items-center rounded-xl bg-white/[0.02] border border-white/[0.05] p-3.5">
+              <div key={idx} className="flex items-center justify-between rounded-xl border border-white/5 bg-white/2 p-3.5">
                 <div className="min-w-0 flex-1">
                   <span className="text-[9px] font-mono font-bold text-white/30">{wl.time}</span>
                   <p className="text-xs text-white/80 font-medium leading-relaxed mt-0.5">{wl.text}</p>
@@ -258,7 +258,7 @@ export default function CryptoPage() {
         </Card>
 
         {/* On-chain network stats */}
-        <Card className="border-white/[0.08] bg-[#111115]/80">
+        <Card className="border-white/8 bg-stockiq-panel/80">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>On-chain Analysis</CardTitle>
@@ -267,14 +267,14 @@ export default function CryptoPage() {
             <Server size={16} className="text-white/30" />
           </CardHeader>
           <CardContent className="grid gap-3 sm:grid-cols-2 h-full">
-            <div className="rounded-xl border border-white/[0.05] bg-white/[0.01] p-4 flex flex-col justify-between">
+            <div className="flex flex-col justify-between rounded-xl border border-white/5 bg-white/1 p-4">
               <span className="text-xs text-white/40 font-semibold uppercase">Active Addresses</span>
               <div>
                 <p className="text-2xl font-bold text-white font-display">892,412</p>
                 <span className="text-[10px] text-emerald-400 font-mono font-semibold">+4.2% (24h)</span>
               </div>
             </div>
-            <div className="rounded-xl border border-white/[0.05] bg-white/[0.01] p-4 flex flex-col justify-between">
+            <div className="flex flex-col justify-between rounded-xl border border-white/5 bg-white/1 p-4">
               <span className="text-xs text-white/40 font-semibold uppercase">Median Transaction Fee</span>
               <div>
                 <p className="text-2xl font-bold text-white font-display">$1.45</p>
@@ -286,12 +286,12 @@ export default function CryptoPage() {
       </div>
 
       {/* Crypto Rankings Table */}
-      <Card className="border-white/[0.08] bg-[#111115]/80">
+      <Card className="border-white/8 bg-stockiq-panel/80">
         <CardHeader>
           <CardTitle>Digital Asset Rankings</CardTitle>
         </CardHeader>
         <CardContent className="p-0 overflow-x-auto">
-          <table className="w-full min-w-[760px] table-premium text-left text-sm">
+          <table className="w-full min-w-190 table-premium text-left text-sm">
             <thead>
               <tr>
                 <th>Rank</th>
@@ -303,7 +303,7 @@ export default function CryptoPage() {
                 <th>AI Predictive Rating</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/[0.04]">
+            <tbody className="divide-y divide-white/4">
               {data.assets.slice(0, 50).map((asset) => {
                 const isUp = asset.changePercent >= 0;
                 
@@ -341,7 +341,7 @@ export default function CryptoPage() {
         </CardContent>
       </Card>
 
-      <Card className="border-white/[0.08] bg-[#111115]/80">
+      <Card className="border-white/8 bg-stockiq-panel/80">
         <CardHeader>
           <CardTitle>Digital Leaders Inside Market Traction</CardTitle>
         </CardHeader>

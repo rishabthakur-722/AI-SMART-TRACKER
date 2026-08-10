@@ -8,6 +8,7 @@ import SocialButton from '../components/auth/SocialButton';
 import { getAuthProviderUrl } from '../api/baseUrl';
 import { useAuth } from '../context/AuthContext';
 import authBg from '../assets/images/auth/auth-bg.png';
+import { isDisposableEmail, isValidEmailAddress } from '../utils/emailValidation';
 
 const getAuthUrl = (provider: 'google') => {
   return getAuthProviderUrl(provider);
@@ -27,16 +28,21 @@ export default function Login() {
     []
   );
 
-  const fillDemoCredentials = () => {
-    setEmail('demo@stockiq.app');
-    setPassword('Demo@1234');
-  };
-
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!email.trim() || !password) {
       toast.error('Enter your email and password.');
+      return;
+    }
+
+    if (!isValidEmailAddress(email)) {
+      toast.error('Enter a valid email address.');
+      return;
+    }
+
+    if (isDisposableEmail(email)) {
+      toast.error('Temporary email addresses are not allowed.');
       return;
     }
 
@@ -77,8 +83,8 @@ export default function Login() {
         >
         <div className="mb-8 flex items-center justify-center gap-3 sm:mb-10 sm:gap-5">
           <div className="relative flex size-16 shrink-0 items-end justify-center text-emerald-300 sm:size-24">
-            <BarChart3 className="size-12 sm:size-[72px]" strokeWidth={2.3} />
-            <TrendingUp className="absolute -right-1 top-1 size-10 sm:size-[58px]" strokeWidth={2.7} />
+            <BarChart3 className="size-12 sm:size-18" strokeWidth={2.3} />
+            <TrendingUp className="absolute -right-1 top-1 size-10 sm:size-14.5" strokeWidth={2.7} />
           </div>
           <div className="min-w-0">
             <p className="text-3xl font-bold leading-none tracking-normal sm:text-5xl">
@@ -91,28 +97,6 @@ export default function Login() {
         <div className="mb-8">
           <h1 className="text-2xl font-bold tracking-normal sm:text-4xl">Welcome back</h1>
           <p className="mt-3 text-base text-white/72">Login to continue your investment journey.</p>
-        </div>
-
-        {/* Demo credentials banner */}
-        <div className="mb-6 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] p-4">
-          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-300">Demo Access</p>
-          <div className="mt-2 flex items-center justify-between gap-3">
-            <div className="min-w-0">
-              <p className="truncate text-sm text-white/80">
-                <span className="font-medium text-white">Email:</span> demo@stockiq.app
-              </p>
-              <p className="mt-0.5 text-sm text-white/80">
-                <span className="font-medium text-white">Password:</span> Demo@1234
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={fillDemoCredentials}
-              className="shrink-0 rounded-lg bg-emerald-400/20 px-3 py-1.5 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-400/30"
-            >
-              Use Demo
-            </button>
-          </div>
         </div>
 
         <div className="space-y-7">
@@ -156,7 +140,7 @@ export default function Login() {
         <button
           type="submit"
           disabled={submitting}
-          className="mt-8 h-14 w-full rounded-lg bg-gradient-to-r from-[#66f283] to-[#25cde8] text-xl font-bold text-black shadow-[0_16px_35px_rgba(31,211,177,0.2)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-65"
+            className="mt-8 h-14 w-full rounded-lg bg-linear-to-r from-[#66f283] to-[#25cde8] text-xl font-bold text-black shadow-[0_16px_35px_rgba(31,211,177,0.2)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-65"
         >
           {submitting ? 'Logging in...' : 'Log In'}
         </button>
