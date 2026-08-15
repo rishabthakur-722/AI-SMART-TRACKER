@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { env } = require('./env');
+const { env, localMongoUri } = require('./env');
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

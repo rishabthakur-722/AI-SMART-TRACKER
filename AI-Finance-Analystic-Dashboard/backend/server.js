@@ -74,5 +74,12 @@ process.on('uncaughtException', (error) => {
 
 startServer().catch((error) => {
   console.error(`Failed to start ${env.appName} API: ${error.message}`);
+  if (/MongoDB|mongoose|ECONNREFUSED|ETIMEDOUT|MongoServer|MongoNetwork|bad auth|authentication failed/i.test(error.message)) {
+    console.error('  → Database startup failure. Check the following:');
+    console.error('  → 1. MONGODB_URI is set correctly in your Render environment variables (no placeholder like <db_username>).');
+    console.error('  → 2. MongoDB Atlas Network Access allows 0.0.0.0/0 (or your Render outbound IPs).');
+    console.error('  → 3. The Atlas database user credentials in the URI are correct.');
+  }
   process.exit(1);
 });
+
