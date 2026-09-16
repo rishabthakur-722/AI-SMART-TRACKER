@@ -110,12 +110,12 @@ function initJobs({ socketService } = {}) {
   });
 
   // ── 2. Price Alert Check (every 5 minutes) ────────────────────────────────
-  register('price-alert-check', '*/5 * * * *', async () => {
+  register('price-monitor-check', '*/5 * * * *', async () => {
     try {
       const alertService = require('./alertService');
       await alertService.checkPriceAlerts({ socketService });
     } catch (err) {
-      console.error('[Scheduler:price-alert-check]', err.message);
+      console.error('[Scheduler:price-monitor-check]', err.message);
     }
   });
 
