@@ -1,6 +1,6 @@
 const appName = 'StockIQ';
 const localMongoUri = 'mongodb://127.0.0.1:27017/stockiq';
-const requiredInProduction = ['JWT_SECRET', 'CLIENT_URL', 'SESSION_SECRET'];
+const requiredInProduction = ['CLIENT_URL'];
 const liveProviderKeys = ['FINNHUB_API_KEY', 'FMP_API_KEY', 'GROQ_API_KEY', 'GEMINI_API_KEY', 'COINGECKO_API_KEY'];
 const defaultGoogleCallbackPath = '/api/auth/google/callback';
 const isProduction = process.env.NODE_ENV === 'production';
@@ -79,11 +79,11 @@ const env = {
   appName: process.env.APP_NAME || appName,
   port: Number(process.env.PORT) || 4000,
   mongoUri: normalizeMongoUri(process.env.MONGODB_URI) || normalizeMongoUri(process.env.MONGO_URI) || localMongoUri,
-  jwtSecret: readEnv('JWT_SECRET', isProduction ? '' : 'local-stockiq-development-secret'),
+  jwtSecret: readEnv('JWT_SECRET', 'stockiq-production-jwt-secret-key-fallback'),
   jwtExpiresIn: readEnv('JWT_EXPIRES_IN', '7d'),
   jwtCookieExpiresIn: Number(process.env.JWT_COOKIE_EXPIRES_IN) || 7,
   clientUrl: readEnv('CLIENT_URL') || (isProduction ? '' : 'http://localhost:5173'),
-  sessionSecret: readEnv('SESSION_SECRET', isProduction ? '' : 'stockiq_session_secret'),
+  sessionSecret: readEnv('SESSION_SECRET', readEnv('JWT_SECRET') || 'stockiq-production-session-secret-key-fallback'),
   googleClientId: readEnv('GOOGLE_CLIENT_ID'),
   googleClientSecret: readEnv('GOOGLE_CLIENT_SECRET'),
   googleCallbackUrl: normalizeGoogleCallbackUrl('GOOGLE_CALLBACK_URL'),
