@@ -35,7 +35,7 @@ const readPositiveInteger = (key, fallback) => {
 const normalizeGoogleCallbackUrl = (key) => {
   const trimmed = readEnv(key);
 
-  if (!trimmed || isLocalhostUrl(trimmed)) {
+  if (!trimmed) {
     return defaultGoogleCallbackPath;
   }
 
