@@ -25,11 +25,21 @@ router.get('/google', requireGoogleOAuth, passport.authenticate('google', { scop
 router.get(
   '/google/callback',
   requireGoogleOAuth,
-  passport.authenticate('google', {
-    failureRedirect: `${env.clientUrl}/login`,
-    session: false,
-  }),
-  googleCallback
+  (req, res, next) => {
+    passport.authenticate('google', { session: false }, (err, user, info) => {
+      if (err) {
+        console.error('[Google OAuth Error]:', err.message, err.oauthError?.data || '');
+        return res.redirect(`${env.clientUrl}/login?error=${encodeURIComponent(err.message || 'Google authentication failed')}`);
+      }
+
+      if (!user) {
+        return res.redirect(`${env.clientUrl}/login?error=Authentication+failed`);
+      }
+
+      req.user = user;
+      return googleCallback(req, res, next);
+    })(req, res, next);
+  }
 );
 
 module.exports = router;
