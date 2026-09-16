@@ -35,30 +35,46 @@ const filterByQuery = (items, filters = {}) => {
   });
 };
 
-const mapMockCrypto = (asset) => ({
-  ...asset,
-  symbol: normalizeSymbol(asset.symbol),
-});
+const mapMockCrypto = (asset) => {
+  const now = new Date().toISOString();
+  return {
+    ...asset,
+    symbol: normalizeSymbol(asset.symbol),
+    quoteTimestamp: now,
+    receivedAt: now,
+    source: 'LocalJSON',
+    isFallback: true,
+    marketStatus: 'FALLBACK',
+  };
+};
 
-const mapCoinGeckoMarket = (asset) => ({
-  id: asset.id,
-  symbol: normalizeSymbol(asset.symbol),
-  name: asset.name,
-  assetType: 'crypto',
-  exchange: 'CoinGecko',
-  currency: 'USD',
-  price: toNumber(asset.current_price),
-  previousClose: round(toNumber(asset.current_price) - toNumber(asset.price_change_24h)),
-  change: round(asset.price_change_24h),
-  changePercent: round(asset.price_change_percentage_24h),
-  marketCap: toNumber(asset.market_cap),
-  volume: toNumber(asset.total_volume),
-  circulatingSupply: toNumber(asset.circulating_supply),
-  rank: asset.market_cap_rank,
-  high52: toNumber(asset.ath),
-  low52: toNumber(asset.atl),
-  sparkline: asset.sparkline_in_7d?.price || [toNumber(asset.current_price)],
-});
+const mapCoinGeckoMarket = (asset) => {
+  const now = new Date().toISOString();
+  return {
+    id: asset.id,
+    symbol: normalizeSymbol(asset.symbol),
+    name: asset.name,
+    assetType: 'crypto',
+    exchange: 'CoinGecko',
+    currency: 'USD',
+    price: toNumber(asset.current_price),
+    previousClose: round(toNumber(asset.current_price) - toNumber(asset.price_change_24h)),
+    change: round(asset.price_change_24h),
+    changePercent: round(asset.price_change_percentage_24h),
+    marketCap: toNumber(asset.market_cap),
+    volume: toNumber(asset.total_volume),
+    circulatingSupply: toNumber(asset.circulating_supply),
+    rank: asset.market_cap_rank,
+    high52: toNumber(asset.ath),
+    low52: toNumber(asset.atl),
+    sparkline: asset.sparkline_in_7d?.price || [toNumber(asset.current_price)],
+    quoteTimestamp: asset.last_updated || now,
+    receivedAt: now,
+    source: 'CoinGecko',
+    isFallback: false,
+    marketStatus: 'LIVE',
+  };
+};
 
 const getMockCryptoMarkets = (filters = {}) => {
   const limit = Number(filters.limit) || 300;

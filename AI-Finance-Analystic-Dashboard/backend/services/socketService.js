@@ -140,7 +140,17 @@ function getIO() {
  */
 function emitMarketTick(tick) {
   if (!_io) return;
-  _io.to('market').emit('market:tick', tick);
+  const now = new Date().toISOString();
+  const canonicalTick = {
+    quoteTimestamp: tick.quoteTimestamp || now,
+    receivedAt: now,
+    source: tick.source || 'SocketTick',
+    isFallback: tick.isFallback ?? false,
+    marketStatus: tick.marketStatus || 'LIVE',
+    currency: tick.currency || 'USD',
+    ...tick,
+  };
+  _io.to('market').emit('market:tick', canonicalTick);
 }
 
 /**

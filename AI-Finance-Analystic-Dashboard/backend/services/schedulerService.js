@@ -89,7 +89,7 @@ function initJobs({ socketService } = {}) {
   // ── 1. Live Market Price Ticks (every 30 seconds) ─────────────────────────
   register('market-ticks', '*/30 * * * * *', async () => {
     try {
-      const { marketService } = require('./marketService');
+      const marketService = require('./marketService');
       const indices = ['SPY', 'QQQ', 'AAPL', 'TSLA', 'NVDA'];
       for (const symbol of indices) {
         try {
@@ -97,9 +97,18 @@ function initJobs({ socketService } = {}) {
           if (quote && socketService) {
             socketService.emitMarketTick({
               symbol: quote.symbol,
+              name: quote.name,
               price: quote.price,
+              previousClose: quote.previousClose,
               change: quote.change ?? 0,
               changePercent: quote.changePercent ?? 0,
+              currency: quote.currency || 'USD',
+              exchange: quote.exchange || 'US',
+              quoteTimestamp: quote.quoteTimestamp,
+              receivedAt: quote.receivedAt,
+              source: quote.source,
+              isFallback: quote.isFallback,
+              marketStatus: quote.marketStatus,
             });
           }
         } catch { /* skip individual symbol errors */ }

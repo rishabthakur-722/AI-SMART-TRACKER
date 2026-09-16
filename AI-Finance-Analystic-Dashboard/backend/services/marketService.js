@@ -66,16 +66,63 @@ const sortByChange = (items, direction = 'desc') => {
   return [...items].sort((a, b) => (a.changePercent - b.changePercent) * multiplier);
 };
 
-const normalizeFund = (fund) => ({
-  ...fund,
-  symbol: normalizeSymbol(fund.symbol),
-  price: fund.nav,
-  exchange: 'AMFI',
-  change: round((fund.nav * fund.changePercent) / 100),
-  marketCap: fund.aum,
-  sector: fund.category,
-  industry: fund.risk,
-});
+const normalizeFund = (fund) => {
+  const now = new Date().toISOString();
+  return {
+    ...fund,
+    symbol: normalizeSymbol(fund.symbol),
+    price: fund.nav,
+    previousClose: fund.nav,
+    exchange: 'AMFI',
+    currency: 'INR',
+    change: round((fund.nav * fund.changePercent) / 100),
+    marketCap: fund.aum,
+    sector: fund.category,
+    industry: fund.risk,
+    quoteTimestamp: now,
+    receivedAt: now,
+    source: 'AMFI',
+    isFallback: false,
+    marketStatus: 'EOD',
+  };
+};
+
+const buildSyntheticStockSnapshot = (symbol, meta = {}) => {
+  const normalizedSymbol = normalizeSymbol(symbol);
+  const hash = hashString(normalizedSymbol);
+  const isIndian = /\.NS$/.test(normalizedSymbol) || meta.exchange === 'NSE';
+  const currency = meta.currency || (isIndian ? 'INR' : 'USD');
+  const exchange = meta.exchange || (isIndian ? 'NSE' : 'NASDAQ');
+  const basePrice = round((isIndian ? 80 : 20) + (hash % 5000) / (isIndian ? 4 : 10), 2);
+  const changePercent = round(((hash % 700) / 100) - 3.5, 2);
+  const change = round((basePrice * changePercent) / 100, 2);
+  const previousClose = round(basePrice - change, 2);
+  const sparkline = buildSyntheticSparkline(normalizedSymbol, basePrice);
+  const now = new Date().toISOString();
+
+  return calculateTrendScore({
+    symbol: normalizedSymbol,
+    name: meta.name || normalizedSymbol,
+    exchange,
+    country: meta.country || (isIndian ? 'IN' : 'US'),
+    currency,
+    assetType: 'stock',
+    sector: meta.sector || fallbackSectors[hash % fallbackSectors.length],
+    industry: meta.industry || fallbackIndustries[hash % fallbackIndustries.length],
+    price: basePrice,
+    previousClose,
+    change,
+    changePercent,
+    marketCap: round(basePrice * (500000000 + (hash % 5000000000)), 0),
+    volume: 100000 + (hash % 5000000),
+    sparkline,
+    quoteTimestamp: now,
+    receivedAt: now,
+    source: 'Synthetic',
+    isFallback: true,
+    marketStatus: 'FALLBACK',
+  });
+};
 
 const getMockUniverse = () => {
   const stocks = readJson('stocks.json').map((stock) => ({
@@ -188,13 +235,18 @@ const mapFinnhubStock = ({ symbol, quote = {}, profile = {} }) => {
   const previousClose = toNumber(quote.pc, price);
   const change = toNumber(quote.d, price - previousClose);
   const changePercent = toNumber(quote.dp, previousClose ? (change / previousClose) * 100 : 0);
+  const normalizedSymbol = normalizeSymbol(symbol);
+  const isIndian = /\.NS$/.test(normalizedSymbol) || profile.exchange === 'NSE';
+  const currency = profile.currency || (isIndian ? 'INR' : 'USD');
+  const now = new Date().toISOString();
+  const quoteTime = quote.t ? new Date(quote.t * 1000).toISOString() : now;
 
   return calculateTrendScore({
-    symbol: normalizeSymbol(symbol),
-    name: profile.name || profile.ticker || normalizeSymbol(symbol),
-    exchange: profile.exchange || 'US',
-    country: profile.country || 'US',
-    currency: profile.currency || 'USD',
+    symbol: normalizedSymbol,
+    name: profile.name || profile.ticker || normalizedSymbol,
+    exchange: profile.exchange || (isIndian ? 'NSE' : 'US'),
+    country: profile.country || (isIndian ? 'IN' : 'US'),
+    currency,
     assetType: 'stock',
     sector: profile.finnhubIndustry || 'Equity',
     industry: profile.finnhubIndustry || 'Equity',
@@ -205,6 +257,11 @@ const mapFinnhubStock = ({ symbol, quote = {}, profile = {} }) => {
     marketCap: profile.marketCapitalization ? round(profile.marketCapitalization * 1000000) : undefined,
     volume: quote.v || undefined,
     sparkline: [previousClose, price],
+    quoteTimestamp: quoteTime,
+    receivedAt: now,
+    source: 'Finnhub',
+    isFallback: false,
+    marketStatus: 'LIVE',
   });
 };
 
@@ -263,6 +320,7 @@ const mapFmpMover = (item) => {
   const price = toNumber(item.price);
   const change = toNumber(item.change);
   const changePercent = toNumber(String(item.changesPercentage || item.changePercent || '').replace('%', ''));
+  const now = new Date().toISOString();
 
   return calculateTrendScore({
     symbol: normalizeSymbol(item.symbol),
@@ -280,6 +338,11 @@ const mapFmpMover = (item) => {
     marketCap: item.marketCap ? toNumber(item.marketCap) : undefined,
     volume: item.volume ? toNumber(item.volume) : undefined,
     sparkline: [price - change, price],
+    quoteTimestamp: now,
+    receivedAt: now,
+    source: 'FMP',
+    isFallback: false,
+    marketStatus: 'LIVE',
   });
 };
 
@@ -387,36 +450,6 @@ const buildSyntheticSparkline = (symbol, basePrice) => {
   });
 };
 
-const buildSyntheticStockSnapshot = (symbol, meta = {}) => {
-  const normalizedSymbol = normalizeSymbol(symbol);
-  const hash = hashString(normalizedSymbol);
-  const isIndian = /\.NS$/.test(normalizedSymbol) || meta.exchange === 'NSE';
-  const currency = meta.currency || (isIndian ? 'INR' : 'USD');
-  const exchange = meta.exchange || (isIndian ? 'NSE' : 'NASDAQ');
-  const basePrice = round((isIndian ? 80 : 20) + (hash % 5000) / (isIndian ? 4 : 10), 2);
-  const changePercent = round(((hash % 700) / 100) - 3.5, 2);
-  const change = round((basePrice * changePercent) / 100, 2);
-  const previousClose = round(basePrice - change, 2);
-  const sparkline = buildSyntheticSparkline(normalizedSymbol, basePrice);
-
-  return calculateTrendScore({
-    symbol: normalizedSymbol,
-    name: meta.name || normalizedSymbol,
-    exchange,
-    country: meta.country || (isIndian ? 'IN' : 'US'),
-    currency,
-    assetType: 'stock',
-    sector: meta.sector || fallbackSectors[hash % fallbackSectors.length],
-    industry: meta.industry || fallbackIndustries[hash % fallbackIndustries.length],
-    price: basePrice,
-    previousClose,
-    change,
-    changePercent,
-    marketCap: round(basePrice * (500000000 + (hash % 5000000000)), 0),
-    volume: 100000 + (hash % 5000000),
-    sparkline,
-  });
-};
 
 const buildSyntheticCandles = (symbol, basePrice) => {
   const hash = hashString(symbol);
@@ -442,7 +475,10 @@ const buildSyntheticCandles = (symbol, basePrice) => {
 
 const getFallbackDirectoryItem = (symbol) => {
   const normalizedSymbol = normalizeSymbol(symbol);
-  const directory = getFallbackStockDirectory().find((item) => item.symbol === normalizedSymbol);
+  const baseSymbol = normalizedSymbol.replace(/\.(NS|BO)$/, '');
+  const directory = getFallbackStockDirectory().find(
+    (item) => item.symbol === normalizedSymbol || item.symbol === baseSymbol
+  );
   if (!directory) return null;
 
   return directory;
@@ -734,6 +770,7 @@ const rawMarketService = {
 
   async getStockBySymbol(symbol) {
     const normalizedSymbol = normalizeSymbol(symbol);
+    const baseSymbol = normalizedSymbol.replace(/\.(NS|BO)$/, '');
 
     if (!env.useMockData) {
       try {
@@ -746,7 +783,9 @@ const rawMarketService = {
       }
     }
 
-    const stock = readJson('stocks.json').find((item) => normalizeSymbol(item.symbol) === normalizedSymbol);
+    const stock = readJson('stocks.json').find(
+      (item) => normalizeSymbol(item.symbol) === normalizedSymbol || normalizeSymbol(item.symbol) === baseSymbol
+    );
     if (stock) {
       return calculateTrendScore({ ...stock, symbol: normalizedSymbol });
     }
@@ -757,6 +796,7 @@ const rawMarketService = {
 
   async getStockQuote(symbol) {
     const normalizedSymbol = normalizeSymbol(symbol);
+    const baseSymbol = normalizedSymbol.replace(/\.(NS|BO)$/, '');
 
     if (!env.useMockData) {
       try {
@@ -769,7 +809,9 @@ const rawMarketService = {
       }
     }
 
-    const stock = readJson('stocks.json').find((item) => normalizeSymbol(item.symbol) === normalizedSymbol);
+    const stock = readJson('stocks.json').find(
+      (item) => normalizeSymbol(item.symbol) === normalizedSymbol || normalizeSymbol(item.symbol) === baseSymbol
+    );
     if (stock) {
       return calculateTrendScore({ ...stock, symbol: normalizedSymbol });
     }

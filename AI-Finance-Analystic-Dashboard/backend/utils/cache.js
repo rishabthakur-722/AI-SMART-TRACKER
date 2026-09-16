@@ -12,6 +12,18 @@ const getCache = (key) => {
 
 const setCache = (key, value, ttl = env.cacheTtlMarket) => {
   if (!isCacheEnabled()) return false;
+
+  if (value && typeof value === 'object' && value.quoteTimestamp) {
+    const existing = cache.get(key);
+    if (existing && typeof existing === 'object' && existing.quoteTimestamp) {
+      const existingTime = new Date(existing.quoteTimestamp).getTime();
+      const newTime = new Date(value.quoteTimestamp).getTime();
+      if (newTime < existingTime) {
+        return false;
+      }
+    }
+  }
+
   return cache.set(key, value, ttl);
 };
 

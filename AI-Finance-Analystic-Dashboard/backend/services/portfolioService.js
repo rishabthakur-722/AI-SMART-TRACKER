@@ -170,6 +170,18 @@ const buildAnalytics = async (userId) => {
     value: currentValue > 0 ? round((value / currentValue) * 100) : 0,
   }));
 
+  const currencyMap = holdings.reduce((acc, holding) => {
+    const key = holding.marketAsset?.currency || (holding.exchange === 'NSE' ? 'INR' : 'USD');
+    acc[key] = (acc[key] || 0) + holding.metrics.currentValue;
+    return acc;
+  }, {});
+
+  const currencyBreakdown = Object.entries(currencyMap).map(([currency, amount]) => ({
+    currency,
+    amount: round(amount),
+    percent: currentValue > 0 ? round((amount / currentValue) * 100) : 0,
+  }));
+
   return {
     summary: {
       initialWalletBalance: INITIAL_WALLET_BALANCE,
@@ -186,6 +198,7 @@ const buildAnalytics = async (userId) => {
     },
     allocation,
     sectorExposure,
+    currencyBreakdown,
     holdings,
   };
 };
